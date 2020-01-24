@@ -1,0 +1,124 @@
+<ng-template [ngIf]="roomBook">
+    <div class="row d-flex justify-content-center">
+        <div class="col-lg-7 col-md-6 col-sm-6">
+            <div class="col-md-11 col-lg-10 col-sm-12 col-12">
+                <label style="font-size: 13px;font-weight: 500">From Date</label>
+                <input
+                    id="cal-img"
+                    type="text"
+                    name="fromDate"
+                    [(ngModel)]="roomBook.fromDate"
+                    [minDate]="minDate"
+                    [maxDate]="roomBook.toDate"
+                    readOnly
+                    placement="top"
+                    [bsConfig]="datePickerConfig"
+                    class="form-control"
+                    bsDatepicker
+                    #dp="bsDatepicker"
+                    autocomplete="off"
+                    placeholder="Check In"
+                    (ngModelChange)="onChangeFilter()"
+                    [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY' }"
+                    style="padding-left:5px;cursor: pointer;"
+                />
+                <div class="d-flex">
+                    <i
+                        class="far fa-calendar-alt p-2  "
+                        (click)="dp.toggle()"
+                        style="position: absolute;
+                        bottom: 2px;
+                        right: 15px;cursor: pointer;"
+                    ></i>
+                </div>
+            </div>
+
+            <div class="col-md-11 col-lg-10 col-sm-12 col-12">
+                <label style=" font-size: 13px;font-weight: 500">To Date</label>
+                <input
+                    id="cal-img"
+                    type="text"
+                    [bsConfig]="datePickerConfig"
+                    class="form-control"
+                    bsDatepicker
+                    placement="top"
+                    #dpy="bsDatepicker"
+                    autocomplete="off"
+                    placeholder="To Date"
+                    readOnly
+                    name="toDate"
+                    [(ngModel)]="roomBook.toDate"
+                    [minDate]="roomBook.fromDate"
+                    (ngModelChange)="onChangeFilter()"
+                    style="padding-left:5px;cursor: pointer;"
+                />
+                <div class="d-flex">
+                    <i
+                        class="far fa-calendar-alt p-2"
+                        (click)="dpy.toggle()"
+                        style="   position: absolute;
+                        bottom: 2px;
+                        right: 15px;cursor: pointer;"
+                    ></i>
+                </div>
+            </div>
+            <div class="col-md-11 col-lg-10 col-sm-12 col-12 editable-dial-example form-group">
+                <label style=" font-size: 13px;font-weight: 500"> Time</label>
+                <input
+                    style="
+                        border: 1px solid #ced4da;
+                    padding: 3px;
+                    border-radius: 4px;
+                    font-weight: 400;
+                    font-size: 14px;
+                    width: inherit;
+                    "
+                    class="form-control"
+                    name="Time"
+                    [(ngModel)]="frTime"
+                    [format]="24"
+                    (ngModelChange)="onChangeHour($event)"
+                    placeholder="Check-In Time"
+                    aria-label="Editable dial"
+                    [ngxTimepicker]="editableDial"
+                    readonly
+                />
+                <ngx-material-timepicker-toggle [for]="editableDial">
+                    <svg
+                        style="position: absolute;
+                            bottom: 6px;
+                        right: 22px;"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 41.301 41.301"
+                        width="20px"
+                        height="20px"
+                        ngxMaterialTimepickerToggleIcon
+                    >
+                        <path
+                            d="M20.642,0c5.698,0,10.857,2.317,14.602,6.047c3.73,3.746,6.047,8.905,6.047,14.603  c0,5.698-2.317,10.857-6.047,14.603c-3.746,3.73-8.904,6.047-14.602,6.047S9.786,38.983,6.056,35.253  C2.31,31.507,0.008,26.349,0.008,20.65c0-5.698,2.301-10.857,6.047-14.603C9.786,2.317,14.944,0,20.642,0L20.642,0z M31.166,19.523  c0.619,0,1.111,0.508,1.111,1.127c0,0.619-0.492,1.127-1.111,1.127H20.674h-0.032c-0.413,0-0.778-0.238-0.968-0.571l-0.016-0.016  l0,0l-0.016-0.032l0,0v-0.016l0,0l-0.016-0.032l0,0l-0.016-0.032l0,0v-0.016l0,0l-0.016-0.032l0,0l-0.016-0.016l0,0v-0.032l0,0  l-0.016-0.032l0,0v-0.016l0,0l-0.016-0.032l0,0v-0.032l0,0v-0.016v-0.016l-0.016-0.016l0,0v-0.032l0,0v-0.032l0,0V20.73l0,0v-0.016  l0,0v-0.032l0,0V20.65l0,0V7.206c0-0.619,0.492-1.111,1.111-1.111c0.619,0,1.127,0.492,1.127,1.111v12.317H31.166z M33.657,7.635  c-3.333-3.333-7.936-5.381-13.015-5.381S10.96,4.301,7.627,7.635C4.31,10.968,2.246,15.571,2.246,20.65  c0,5.079,2.063,9.682,5.381,13.016c3.333,3.333,7.936,5.381,13.015,5.381s9.682-2.048,13.015-5.381  c3.333-3.333,5.397-7.936,5.397-13.016C39.054,15.571,36.991,10.968,33.657,7.635L33.657,7.635z"
+                        />
+                    </svg>
+                </ngx-material-timepicker-toggle>
+                <ngx-material-timepicker #editableDial [enableKeyboardInput]="true"></ngx-material-timepicker>
+            </div>
+        </div>
+        <div class="col-lg-5 col-md-6 col-sm-6 gap ">
+            <div class="form-group">
+                <div style="color: bold;font-weight: bold;">Days : {{ roomBook.payment.units }}</div>
+                <label style="color: bold;font-weight: bold;">Guests</label>
+                <div>
+                    <button class="btn" (click)="callRate('-')" [disabled]="personsSelectionObj.selectedNoOFPersons == 1" (click)="onPersonsSelected()">
+                        <i class="fas fa-minus-circle round"></i>
+                    </button>
+                    <span style="font-weight: 700; font-size: 16px; padding: 4px;">{{ personsSelectionObj.selectedNoOFPersons }}</span>
+                    <button class="btn" (click)="callRate('+')" [disabled]="personsSelectionObj.selectedNoOFPersons == 20" (click)="onPersonsSelected()">
+                        <i class="fas fa-plus-circle round"></i>
+                    </button>
+                </div>
+                <div *ngIf="personsSelectionObj.selectedNoOFPersons > personsSelectionObj.totalSelectedRoomPersons">
+                    <span class="warning-message">*Max. no of persons allowed in selected room's is {{ personsSelectionObj.totalSelectedRoomPersons }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>

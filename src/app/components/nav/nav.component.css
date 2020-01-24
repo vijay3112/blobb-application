@@ -1,0 +1,190 @@
+.nav > li > a {
+    padding: 10px 35px;
+    /* color: #ffffff; */
+    color: #f73f5b;
+    font-size: 15px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1080px) {
+    .nav > li > a {
+        padding: 10px 20px;
+    }
+}
+.line {
+    height: 26px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.nav-link {
+    position: relative;
+    bottom: -15px;
+    transition: 0.2s;
+    background-color: #f73f5b;
+    height: 1px;
+    margin: auto;
+}
+.line:hover .nav-link {
+    bottom: 0px;
+}
+/* .Login {
+    text-align: center;
+    border-radius: 8px;
+    background-color: #f73f5b !important;
+    color: #ffffff !important;
+    margin-top: -5px;
+    transition: 0.7s;
+} */
+/* .Login:hover {
+    transform: scale(0.9);
+} */
+img {
+    width: 260px;
+    height: 100px;
+    outline: none;
+}
+img:hover {
+    animation: none !important;
+}
+
+@media screen and (max-width: 400px) {
+    img {
+        width: 200px;
+        height: 80px;
+    }
+}
+
+head {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    top: 0px;
+    left: 0px;
+    transform: translateZ(0);
+    z-index: 99;
+    box-shadow: none;
+}
+
+.show-head {
+    background-color: white;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05) !important;
+    transition: all 0.25s linear;
+    z-index: 9999;
+}
+.show-head a {
+    color: #000000 !important;
+}
+.show-head button span {
+    color: #000000;
+    font-weight: 500;
+}
+.hide-head {
+    color: white !important;
+    /* background-color: #00000033; */
+    box-shadow: none;
+    transition: all 0.25s linear;
+}
+
+.hide-head button span {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 18px;
+}
+.nav {
+    position: relative;
+    top: 35px;
+}
+a {
+    color: inherit;
+}
+.button {
+    outline: none;
+    float: right;
+    margin-top: 25px;
+    border-color: #f73f5b;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+@media screen and (max-width: 991px) {
+    .nav {
+        position: relative;
+        top: 40px;
+        padding-bottom: 60px;
+        padding-top: 30px;
+        left: 60px;
+    }
+    img {
+        position: relative;
+        top: 0;
+        left: -32px;
+    }
+    .line {
+        margin: 10px;
+    }
+    .nav-link {
+        margin-left: 35px !important;
+    }
+    /* .sidnav {
+        background-color: rgba(0, 0, 0, 0.8);
+    } */
+}
+@media screen and (max-width: 524px) {
+    .nav {
+        padding-top: 0px;
+        top: 0px;
+        padding-bottom: 30px;
+    }
+    /* .Login {
+        width: 180px;
+    } */
+}
+/* a {
+    position: relative;
+}
+a:before {
+    content: "";
+    width: 100%;
+    position: absolute;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    
+    background-color: #f73f5b;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+} */
+@media screen and (max-width: 991px) {
+    head {
+        position: fixed;
+
+        height: auto;
+        top: 0px;
+        left: 0px;
+        transform: translateZ(0);
+        z-index: 99;
+        box-shadow: none;
+        background-color: #ffffff;
+    }
+    .button {
+        outline: none;
+        float: right;
+        margin-top: 18px;
+        border-color: #f73f5b;
+    }
+
+    .image img {
+        height: 70px;
+        width: 200px;
+    }
+}

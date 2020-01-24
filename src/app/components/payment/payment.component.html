@@ -1,0 +1,42 @@
+<ng-template [ngIf]="type == 'room_payment' && payment">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-12 ">
+                <div class="row cet">
+                    <div class="col-lg-8 col-xl-6 col-md-6 col-sm-6 col-6 ">
+                        <p style="font-size:13px; padding-top:20px;font-weight: 500">COST</p>
+                    </div>
+                    <div class="col-lg-4 col-xl-6  col-md-6 col-sm-6 col-6" style="padding-top:20px">
+                        <span style="color:#f73f5b;font-weight:bold"> {{ payment.cost | currency }} </span>
+                    </div>
+                </div>
+
+                <div class="row cet">
+                    <div class="col-lg-8 col-xl-6 col-md-6 col-sm-6 col-6">
+                        <p style="font-size:13px;font-weight: 500">CGST {{ payment.cgst | percentage }}</p>
+                    </div>
+                    <div class="col-lg-4 col-xl-6  col-md-6 col-sm-6 col-6 ">
+                        <span style="color:#f73f5b; font-weight:bold">{{ payment.cgstPrice | currency }} </span>
+                    </div>
+                </div>
+                <div class="row cet">
+                    <div class="col-lg-8 col-xl-6 col-md-6 col-sm-6 col-6">
+                        <p style="font-size:13px;font-weight: 500">SGST {{ payment.sgst | percentage }}</p>
+                    </div>
+                    <div class="col-lg-4 col-xl-6  col-md-6 col-sm-6 col-6 ">
+                        <span style="color:#f73f5b;font-weight:bold">{{ payment.sgstPrice | currency }} </span>
+                    </div>
+                </div>
+                <hr class="head" />
+                <div class="row cet">
+                    <div class="col-lg-8 col-xl-6 col-md-6 col-sm-6 col-6 ">
+                        <p style="font-size:13px;font-weight: 500">GRAND TOTAL</p>
+                    </div>
+                    <div class="col-lg-4 col-xl-6  col-md-6 col-sm-6 col-6 ">
+                        <span style="color:#f73f5b;font-weight:bold"> {{ payment.amount | currency }} </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>

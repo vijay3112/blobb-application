@@ -1,0 +1,178 @@
+/* .image h1 {
+    position: absolute;
+    top: 50%;
+    left: 70px;
+    font-weight: bold;
+    font-size: 2.5rem;
+} */
+.image {
+    background-image: url("../../../../assets/img/blobb3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    color: white;
+    position: relative;
+    bottom: 16px;
+}
+.blur {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+}
+p {
+    margin-top: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 60px;
+}
+
+hr {
+    width: 105px;
+    height: 5px;
+    border-radius: 6px;
+    background-image: linear-gradient(89deg, #f73f5b, #263840);
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+h3 {
+    font-size: 32px;
+    letter-spacing: 0.5px;
+    color: #303030;
+}
+.btn {
+    background-color: #ee3f56;
+    border-radius: 4px;
+    color: #ffffff;
+    border: none;
+    width: 100%;
+    outline: none;
+    height: 40px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+@media screen and (max-width: 991px) {
+    .blur h1 {
+        padding-top: 70px;
+        padding-left: 10px !important;
+    }
+}
+@media screen and (max-width: 600px) {
+    .image h1 {
+        font-size: 25px;
+        /* position: relative;
+        left: 10px; */
+    }
+    h2 {
+        padding-top: 15px !important;
+        font-size: 25px !important;
+    }
+    h3 {
+        padding-top: 25px !important;
+        font-size: 25px !important;
+    }
+    h1 {
+        font-size: 25px !important;
+    }
+
+    p {
+        margin-bottom: 30px !important;
+    }
+    hr {
+        margin-bottom: 20px !important;
+        height: 3px !important;
+    }
+    .gall {
+        width: 86px !important;
+    }
+    .amen {
+        width: 105px !important;
+    }
+    .cont {
+        width: 112px !important;
+    }
+}
+span {
+    color: red !important;
+    font-size: 12px;
+    content: "*";
+    display: inline;
+    padding-left: 10px;
+}
+span:after {
+    color: red !important;
+    font-size: 12px;
+    content: "*";
+    display: inline;
+}
+
+@media screen and (max-width: 340px) {
+    .gallaxy {
+        width: 93%;
+    }
+    .image {
+        background-image: url("../../../../assets/banjarahills/banjara13.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 70vh;
+        width: 95%;
+        color: white;
+        position: relative;
+        bottom: 16px;
+    }
+    .amenity {
+        width: 95%;
+    }
+
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        border-radius: 0.25rem;
+        width: 93%;
+    }
+    .iconsalignment {
+        margin-right: 5px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .image {
+        background-repeat: repeat-x;
+        background-position-x: 50%;
+        animation: bg-slide 40s linear infinite;
+        -webkit-animation: bg-slide 40s linear infinite;
+        will-change: background-position-x;
+        animation-fill-mode: both;
+        -webkit-animation-fill-mode: both;
+    }
+    @keyframes bg-slide {
+        0% {
+            background-position-x: 0%;
+        }
+        50% {
+            background-position-x: 100%;
+        }
+        100% {
+            background-position-x: 0%;
+        }
+    }
+
+    @-webkit-keyframes bg-slide {
+        0% {
+            background-position-x: 0%;
+        }
+        50% {
+            background-position-x: 100%;
+        }
+        100% {
+            background-position-x: 0%;
+        }
+    }
+}

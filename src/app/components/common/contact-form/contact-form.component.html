@@ -1,0 +1,14 @@
+<div class="card-e">
+  <header>CONTACT FORM</header>
+  <form id="form" class="topBefore" novalidate autocomplete='off'>
+    <input id="name" type="text" placeholder="NAME" required class="question" [(ngModel)]="inputData.name" maxlength="50"
+      [ngModelOptions]="{standalone: true}">
+    <input id="email" type="email" placeholder="E-MAIL" required class="question" [(ngModel)]="inputData.email"
+      maxlength="50" [ngModelOptions]="{standalone: true}">
+    <input id="mobile" type="number" placeholder="MOBILE" required class="question" [(ngModel)]="inputData.mobile"
+      maxlength="15" [ngModelOptions]="{standalone: true}">
+    <textarea id="message" type="text" placeholder="MESSAGE" required class="question" [(ngModel)]="inputData.message"
+      maxlength="500" [ngModelOptions]="{standalone: true}"></textarea>
+    <input id="submit" type="submit" value="SUBMIT" (click)="clickOnSubmit()">
+  </form>
+</div>

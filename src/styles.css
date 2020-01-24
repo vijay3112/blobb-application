@@ -1,0 +1,195 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "styles/custom";
+@import "styles/common";
+@import "styles/custom-animate";
+@import "styles/animate";
+@import "~font-awesome/css/font-awesome.css";
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+/* @import "~typeface-source-sans-pro/index.css";
+@import "~material-design-icons/iconfont/material-icons.css";
+@import "~@fortawesome/fontawesome-free/css/all.css";
+@import "~typeface-lato/index.css"; */
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none !important;
+    /* font-family: "Lato"; */
+}
+html {
+    overflow-x: hidden !important;
+}
+html,
+body {
+    margin: 0;
+    font-weight: 300 !important;
+    width: 100%;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-y: scroll;
+    font-family: sans-serif, Arial, Helvetica;
+    min-width: 350px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0 !important;
+}
+
+a {
+    cursor: pointer !important;
+    color: darkorange;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.bg-img {
+    background-image: url(assets/img/bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #293949;
+    height: 100%;
+}
+
+.pointer {
+    cursor: pointer !important;
+}
+
+header {
+    min-height: 69px;
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+}
+
+body::-webkit-scrollbar * {
+    background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.5) !important;
+}
+
+.padding5 {
+    padding: 5px;
+}
+
+.padding10 {
+    padding: 10px;
+}
+
+.padding20 {
+    padding: 20px;
+}
+
+.padding30 {
+    padding: 30px;
+}
+
+.padding40 {
+    padding: 40px;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+/* ====================date-picker================================= */
+
+.bs-datepicker-head {
+    background-color: #f73f5b !important;
+}
+
+.theme-green .bs-datepicker-body table td span.selected {
+    background-color: #f73f5b !important;
+}
+/* .bs-datepicker {
+    position: relative !important;
+    top: 120px !important;
+} */
+
+.bs-datepicker-body table td {
+    color: black !important;
+    font-weight: 600 !important;
+}
+/* .bs-datepicker-container {
+    padding: 0px !important;
+}
+
+.bs-datepicker-body {
+    padding: 8px !important;
+    border-radius: none !important;
+    min-height: 183px !important;
+    min-width: 231px !important;
+    border: none;
+}
+
+.bs-datepicker-head {
+    min-width: 209px !important;
+    height: 45px !important;
+    padding: 9px !important;
+    border-radius: 0 !important;
+    text-align: justify;
+}
+
+.bs-datepicker-body table.days span {
+    width: 26px;
+    height: 27px;
+    line-height: 30px;
+} */
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+input[type="checkbox"]:disabled {
+    border-color: #eee;
+    color: #ccc !important;
+    background: linear-gradient(to top, #e6e6e6 0px, #fff 100%) repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+    cursor: not-allowed !important;
+}
+
+/* ====================time-picker================================= */
+
+.timepicker__header,
+.clock-face__clock-hand {
+    background-color: #f73f5b !important;
+}
+.clock-face__number span.active {
+    background-color: #f73f5b !important;
+}
+.timepicker-button {
+    color: #f73f5b !important;
+}
+.clock-face__clock-hand_minute:before {
+    border: 4px solid #f73f5b !important;
+}
+.timepicker-dial__item_active {
+    color: #f73f5b !important;
+    background-color: #fff !important;
+}
+.ngx-material-timepicker-toggle {
+    padding: 0 !important;
+}

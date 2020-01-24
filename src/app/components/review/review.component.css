@@ -1,0 +1,232 @@
+.bg-img {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../../assets/img/Thank-you.png");
+    background-repeat: no-repeat;
+    height: 70vh;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    bottom: 16px;
+}
+.bg-img h4 {
+    /* transform: translate(30%, 300px); */
+    position: relative;
+    top: 50%;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+.billing-section {
+    border: 1px solid gray;
+    border-top: none;
+}
+.billing-section h5 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.inside-header {
+    background-color: #f73f5b;
+    color: white;
+    /* padding: 15px; */
+    height: 28px;
+}
+
+.booking-details-content {
+    margin: auto;
+}
+h6 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-size: 11px;
+}
+
+li {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+@media screen and (max-width: 330px) {
+    .billing-section {
+        margin-right: 25px;
+    }
+    .instructions-part {
+        margin-right: 25px;
+    }
+    .bg-img h4 {
+        font-size: 28px;
+        margin-right: 25px !important;
+    }
+}
+/* ========================= 3rd template ================================= */
+.cus-bkg-section {
+    border: 1px solid gray;
+    border-top: none;
+}
+.cus-bkg-section h5 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+.booking-side {
+    padding-right: 120px;
+}
+.box-in-header {
+    background-color: #f73f5b;
+    color: white;
+    padding: 1px;
+}
+.grid-container-2 {
+    border: solid 1px gray;
+    border-top: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.details h6 {
+    font-size: 15px !important;
+}
+@media screen and (max-width: 992px) {
+    .grid-container-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.grid-container-2 h5 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 29px;
+    font-weight: 550;
+}
+@media screen and (max-width: 330px) {
+    .well {
+        margin-right: 25px;
+    }
+}
+/* @media screen and (max-width: 767px) { */
+/* .flexing { */
+/* background-color: #f73f5b; */
+/* display: flex;
+        flex-direction: row; */
+/* align-self: flex-start;
+        align-items: flex-start;
+        align-content: flex-start;
+
+        justify-content: space-between; */
+/* } */
+/* } */
+
+/* h5 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 15px;
+    font-style: normal;
+}
+
+#can-card {
+    width: 70%;
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width: 767px) {
+    #can-card {
+        width: 90%;
+    }
+}
+
+#row3 {
+    padding: 20px;
+}
+#details-card {
+    width: 60%;
+}
+@media screen and (max-width: 767px) {
+    #details-card {
+        width: 90%;
+        margin: 2px;
+    }
+}
+
+.content {
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 12px;
+    font-style: normal;
+}
+
+.content h6 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 15px;
+    font-style: normal;
+    line-height: 25px;
+    letter-spacing: 0.7px;
+}
+
+#can-card p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 12px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 700px) {
+    #can-card p {
+        font-size: 13px;
+    }
+}
+
+.price-content p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 12px;
+    font-style: normal;
+    font-weight: bold;
+}
+@media screen and (max-width: 330px) {
+    .card {
+        margin-right: 18px !important;
+    }
+    #can-card {
+        width: 100% !important;
+    }
+    #details-card {
+        width: 100% !important;
+    }
+    .content h6 {
+        font-size: 14px;
+    }
+    .review2 h5 {
+        font-size: 18px !important;
+    }
+} */
+
+/* @media screen and (min-width: 600px) {
+    .price-card-align {
+        margin: 10px;
+    }
+} */
+/* @media screen and (max-width: 991px) {
+    .price-content p {
+        font-size: 9px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .price-content p {
+        font-size: 7px;
+    }
+} */

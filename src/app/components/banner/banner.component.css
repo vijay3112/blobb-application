@@ -1,0 +1,245 @@
+:root {
+    --primary-color: #f03d06;
+}
+.image {
+    background-image: url("../../../assets/jubileehills/jublicr008.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 85vh;
+    background-size: cover;
+    position: relative;
+    bottom: 16px;
+}
+.blur {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.landing-desc {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.Search {
+    background-color: #f73f5b !important;
+    color: #ffffff !important;
+    width: 100%;
+    font-size: 12px;
+    font-weight: bold;
+    transition: 0.7s;
+}
+.Search:hover {
+    transform: scale(0.9);
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+input:focus {
+    outline: none;
+    box-shadow: none;
+}
+select:focus {
+    outline: none;
+    box-shadow: none;
+}
+h3 {
+    font-size: 55px;
+    /* font-display: none; */
+}
+.close span {
+    font-size: 30px !important;
+}
+span {
+    font-size: 55px;
+}
+
+@media screen and (max-width: 1113px) {
+    h3 {
+        font-size: 45px;
+    }
+    span {
+        font-size: 45px;
+    }
+}
+@media screen and (max-width: 991px) {
+    h3 {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 991px) {
+    span {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .card {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+.stay {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+@media screen and (max-width: 767px) {
+    .stay {
+        padding: 0;
+        margin-bottom: 30px;
+    }
+    .image {
+        height: 510px !important;
+    }
+    /* .align-middle {
+        padding-top: 80px;
+    } */
+}
+@media screen and (max-width: 767px) {
+    .landing-desc {
+        padding: 10px;
+        margin-bottom: 0px !important;
+    }
+    .align-middle {
+        padding-top: 80px;
+    }
+}
+@media screen and (max-width: 600px) {
+    h3 {
+        font-size: 25px;
+    }
+    /* .align-middle {
+        padding-top: 70px;
+    } */
+    .card {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /* .image {
+        height: 73vh !important;
+    } */
+}
+
+@media screen and (max-width: 600px) {
+    span {
+        font-size: 25px;
+    }
+}
+.form-control {
+    font-size: 13px !important;
+    background-color: #ffffff !important;
+}
+
+.btn img {
+    position: relative;
+    right: 5px;
+}
+.input-container span {
+    font-size: 12px;
+    color: red !important;
+}
+.input-container span:after {
+    color: red !important;
+    font-size: 12px;
+    content: "*";
+    display: inline;
+}
+/* @media only screen and (orientation: landscape) {
+} */
+@media screen and (min-width: 568px) and (max-width: 823px) {
+    .blur {
+        padding: auto !important;
+    }
+    .card {
+        margin-top: auto !important;
+        margin-bottom: auto !important;
+    }
+
+    .landing-desc {
+        margin-top: auto !important;
+        margin-bottom: auto !important;
+    }
+}
+@media screen and (max-width: 576px) {
+    .card {
+        height: 350px !important;
+    }
+    .editable-dial-example {
+        margin-top: 48px !important;
+    }
+    .guest label {
+        margin-top: 7px !important;
+    }
+    .chec label {
+        margin-top: 6px !important;
+    }
+    .image {
+        height: 100vh !important;
+    }
+    .checkin {
+        margin-bottom: -28px;
+    }
+    .chec {
+        margin-top: -8px !important;
+    }
+    .form-group label {
+        margin-top: 54px;
+        margin-bottom: -0.5rem !important;
+    }
+    .sear {
+        margin-top: -4px !important;
+    }
+    input {
+        padding-left: 12px !important;
+    }
+}
+@media screen and (max-width: 335px) {
+    .card {
+        margin-left: 15px !important;
+        width: 85% !important;
+    }
+    .card-title {
+        letter-spacing: 1.5px !important;
+        font-size: 15px !important;
+    }
+    h3 {
+        margin-right: 25px !important;
+    }
+}
+@media screen and (min-width: 375px) and (max-width: 414px) {
+    .card {
+        bottom: 40px !important;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .image {
+        background-repeat: repeat-x;
+        background-position-x: 50%;
+        animation: bg-slide 60s linear infinite;
+        -webkit-animation: bg-slide 60s linear infinite;
+        will-change: background-position-x;
+        animation-fill-mode: both;
+        -webkit-animation-fill-mode: both;
+    }
+    @keyframes bg-slide {
+        0% {
+            background-position-x: 0%;
+        }
+        50% {
+            background-position-x: 100%;
+        }
+        100% {
+            background-position-x: 0%;
+        }
+    }
+
+    @-webkit-keyframes bg-slide {
+        0% {
+            background-position-x: 0%;
+        }
+        50% {
+            background-position-x: 100%;
+        }
+        100% {
+            background-position-x: 0%;
+        }
+    }
+}

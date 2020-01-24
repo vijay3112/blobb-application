@@ -1,0 +1,24 @@
+.paybtn {
+    margin-bottom: 1rem;
+    width: 160px;
+    height: 40px;
+    background-color: #f73f5b;
+    border-style: none;
+    color: #fff;
+}
+.paybtn:disabled {
+    cursor: not-allowed;
+    background-color: #ccc;
+}
+
+@media screen and (max-width: 640px) {
+    .paybtn {
+        margin-bottom: 1rem;
+        width: 100px;
+        height: 40px;
+        background-color: #f73f5b;
+        border-style: none;
+        color: #fff;
+        margin-right: 2px;
+    }
+}

@@ -1,0 +1,39 @@
+<div class="feedback">
+    <h1 style="padding-top: 40px">What Our Customers Say</h1>
+    <hr />
+    <div fxLayout="row wrap" fxLayoutAlign="center center" data-aos="fade-right" data-aos-duration="1000">
+        <div fxFlex="100" fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxLayoutAlign="center center">
+            <ul class="slides1">
+                <ng-container *ngFor="let item of feedbackList; let i = index">
+                    <input type="radio" name="radio-btn" id="img+{{ i - 1 }}" checked />
+                    <li class="slide-container">
+                        <div fxLayout="row wrap" class="slide" fxFlex="100">
+                            <div fxFlex="20" fxFlex.xs="100" fxFlex.sm="100" style="margin-top: 2em;">
+                                <!-- <img [src]="item.img" style="height:120px;margin-top:120px" /> -->
+                                <img-load [id]="item.profile.id" height="160px" radius="50%"> </img-load>
+                            </div>
+
+                            <div fxFlex="80" fxFlex.sm="100" fxFlex.xs="100">
+                                <div>
+                                    <p>
+                                        {{ item.summary }}
+                                    </p>
+                                    <p fxLayoutAlign="end center" class="para">-{{ item.profile.name }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nav">
+                            <label for="img+{{ i - 1 == 1 ? 0 : i - 1 + 1 }}" class="prev">&#x2039;</label>
+                            <label for="img+{{ i - 1 == feedbackList.length ? i - 1 : i - 1 - 1 }}" class="next1">&#x203a;</label>
+                        </div>
+                    </li>
+                    <li class="nav-dots">
+                        <ng-container *ngFor="let item of feedbackList; let i = index">
+                            <label for="img+{{ i - 1 }}" class="nav-dot" id="img-dot+{{ i - 1 }}"></label>
+                        </ng-container>
+                    </li>
+                </ng-container>
+            </ul>
+        </div>
+    </div>
+</div>
