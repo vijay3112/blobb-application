@@ -1,0 +1,105 @@
+<ng-template [ngIf]="type == 'quick' && profile">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-12">
+                <form novalidate autocomplete="off" [formGroup]="UserDetailsForm">
+                    <div class="input-container">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-6">
+                                <div class="form-group">
+                                    <label style="font-size: 12px;">Mobile*</label>
+                                    <div class="input-group date">
+                                        <input
+                                            class="form-control"
+                                            required
+                                            type="number"
+                                            placeholder="Mobile"
+                                            name="profile_mobile"
+                                            [(ngModel)]="profile.mobile"
+                                            [pattern]="Props.PHONE_PATTERN"
+                                            required
+                                            formControlName="mobile"
+                                            (focusout)="quickAdd('mobile')"
+                                        />
+                                        <span
+                                            class="col-12 error"
+                                            *ngIf="UserDetailsForm.get('mobile').touched && UserDetailsForm.get('mobile').hasError('required')"
+                                        >
+                                            Mobile required
+                                        </span>
+                                        <span
+                                            class="col-12 error"
+                                            *ngIf="UserDetailsForm.get('mobile').touched && UserDetailsForm.get('mobile').hasError('pattern')"
+                                        >
+                                            Invalid Mobile Number
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-6">
+                                <div class="form-group">
+                                    <label style="font-size: 12px;">Name*</label>
+                                    <div class="input-group date">
+                                        <input
+                                            class="form-control"
+                                            placeholder="Name"
+                                            name="profile_name"
+                                            [(ngModel)]="profile.name"
+                                            required
+                                            [pattern]="Props.DATA_PATTERN"
+                                            minlength="4"
+                                            maxlength="99"
+                                            formControlName="name"
+                                            (focusout)="quickAdd('name')"
+                                            required
+                                        />
+                                        <span
+                                            class="col-12 error"
+                                            *ngIf="UserDetailsForm.get('name').touched && UserDetailsForm.get('name').hasError('required')"
+                                        >
+                                            Name required
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-12">
+                                <div class="form-group">
+                                    <label style="font-size: 12px;">Email*</label>
+                                    <div class="input-group date">
+                                        <input
+                                            class="form-control"
+                                            placeholder="Email"
+                                            name="profile_email"
+                                            [(ngModel)]="profile.email"
+                                            required
+                                            [pattern]="Props.EMAIL_PATTERN"
+                                            minlength="4"
+                                            maxlength="99"
+                                            (focusout)="quickAdd('email')"
+                                            formControlName="email"
+                                            required
+                                        />
+                                        <span
+                                            class="col-12 error"
+                                            *ngIf="UserDetailsForm.get('email').touched && UserDetailsForm.get('email').hasError('required')"
+                                        >
+                                            Email required
+                                        </span>
+                                        <span
+                                            class="col-12 error"
+                                            *ngIf="UserDetailsForm.get('email').touched && UserDetailsForm.get('email').hasError('pattern')"
+                                        >
+                                            Enter valid Email
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</ng-template>

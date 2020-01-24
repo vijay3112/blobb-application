@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="42" height="33" viewBox="0 0 42 33">
+    <defs>
+        <filter id="a" width="105.9%" height="124.5%" x="-2.9%" y="-12.3%" filterUnits="objectBoundingBox">
+            <feOffset dy="6" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="4"/>
+            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <path id="b" d="M23.925 0c.701 0 1.238.55 1.238 1.27v8.46c0 .72-.537 1.27-1.238 1.27H1.65C.949 11 .413 10.45.413 9.73V1.27C.412.55.949 0 1.65 0h22.275zm.413 9.73V1.27c0-.255-.166-.424-.413-.424H1.65a.419.419 0 0 0-.412.423v8.462c0 .254.165.423.412.423h22.275c.248 0 .413-.17.413-.423z"/>
+        <path id="d" d="M11.247 3.85c-.23 0-.384-.11-.384-.275 0-.165.153-.275.384-.275h3.08c.232 0 .386.11.386.275 0 .165-.154.275-.385.275h-3.08z"/>
+        <path id="f" d="M23.1 8.8c.248 0 .412.11.412.275 0 .165-.164.275-.412.275H2.475c-.248 0-.413-.11-.413-.275 0-.165.165-.275.413-.275H23.1z"/>
+        <path id="h" d="M23.1 7.15c.248 0 .412.11.412.275 0 .165-.164.275-.412.275H2.475c-.248 0-.413-.11-.413-.275 0-.165.165-.275.413-.275H23.1z"/>
+        <path id="j" d="M13.246 13.663c.586.33.916.864.916 1.398 0 .535-.33 1.028-.916 1.398-.074.041-.11.041-.184.041-.146 0-.256-.082-.33-.206-.11-.205-.036-.452.147-.534.33-.205.55-.452.55-.658 0-.205-.183-.452-.55-.657-.587-.412-.916-.905-.916-1.44 0-.534.33-1.027.916-1.397.183-.123.403-.041.477.164.073.206.036.453-.147.535-.293.246-.513.493-.513.699 0 .205.183.452.55.657z"/>
+        <path id="l" d="M8.296 14.763c.586.33.917.864.917 1.398 0 .535-.33 1.028-.917 1.398-.074.041-.11.041-.183.041-.147 0-.257-.082-.33-.206-.11-.205-.037-.452.146-.534.33-.206.55-.452.55-.658 0-.205-.183-.452-.55-.658-.587-.41-.917-.904-.917-1.438 0-.535.33-1.028.917-1.398.183-.123.403-.041.477.164.11.206.036.453-.147.535-.293.246-.513.493-.513.699 0 .205.183.452.55.657z"/>
+        <path id="n" d="M17.646 14.763c.586.33.916.864.916 1.398 0 .535-.33 1.028-.916 1.398-.074.041-.11.041-.183.041-.147 0-.257-.082-.33-.206-.11-.205-.037-.452.146-.534.33-.206.55-.452.55-.658 0-.205-.183-.452-.55-.658-.587-.41-.916-.904-.916-1.438 0-.535.33-1.028.916-1.398.183-.123.403-.041.477.164.073.206.036.453-.147.535-.293.246-.513.493-.513.699 0 .205.183.452.55.657z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd" filter="url(#a)" transform="translate(8 2)">
+        <mask id="c" fill="#fff">
+            <use xlink:href="#b"/>
+        </mask>
+        <path fill="#F73F5B" d="M-.688-1.65h27.5V12.1h-27.5z" mask="url(#c)"/>
+        <mask id="e" fill="#fff">
+            <use xlink:href="#d"/>
+        </mask>
+        <path fill="#F73F5B" d="M9.213 1.65h7.15V5.5h-7.15z" mask="url(#e)"/>
+        <mask id="g" fill="#fff">
+            <use xlink:href="#f"/>
+        </mask>
+        <path fill="#F73F5B" d="M.963 7.15h24.2V11H.963z" mask="url(#g)"/>
+        <mask id="i" fill="#fff">
+            <use xlink:href="#h"/>
+        </mask>
+        <path fill="#F73F5B" d="M.963 5.5h24.2v3.85H.963z" mask="url(#i)"/>
+        <mask id="k" fill="#fff">
+            <use xlink:href="#j"/>
+        </mask>
+        <path fill="#F73F5B" d="M10.313 10.45h5.5v7.7h-5.5z" mask="url(#k)"/>
+        <mask id="m" fill="#fff">
+            <use xlink:href="#l"/>
+        </mask>
+        <path fill="#F73F5B" d="M5.362 11h5.5v7.7h-5.5z" mask="url(#m)"/>
+        <mask id="o" fill="#fff">
+            <use xlink:href="#n"/>
+        </mask>
+        <path fill="#F73F5B" d="M14.713 11h5.5v7.7h-5.5z" mask="url(#o)"/>
+        <text fill="#F73F5B" font-family="OpenSans-Bold, Open Sans" font-size="10.731" font-weight="bold" letter-spacing="-.02" mask="url(#o)">
+            <tspan x="10.863" y="20.1">A</tspan> <tspan x="10.863" y="34.1">C</tspan>
+        </text>
+    </g>
+</svg>

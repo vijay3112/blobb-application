@@ -1,0 +1,130 @@
+.card {
+    margin-bottom: 30px;
+}
+
+.icon-action {
+    margin-top: 5px;
+    float: right;
+    font-size: 80%;
+}
+
+.list-group-item .title {
+    margin-top: 5px;
+    margin-bottom: 12px;
+}
+.locations ul li {
+    list-style: none;
+    line-height: 25px;
+}
+i {
+    color: #f73f5b;
+}
+a {
+    text-decoration: none;
+}
+h5 {
+    font-weight: 500;
+    color: #000000;
+}
+h6 {
+    color: #000000;
+}
+input[type="checkbox"] {
+    visibility: hidden;
+}
+.checkbox {
+    width: 100%;
+    margin: 15px auto;
+    position: relative;
+    left: -17px;
+    display: block;
+}
+
+.checkbox input[type="checkbox"] {
+    width: auto;
+    opacity: 0.00000001;
+    position: absolute;
+    left: 0;
+    margin-left: -20px;
+}
+.checkbox label {
+    position: relative;
+}
+.checkbox label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 4px;
+    width: 18px;
+    height: 18px;
+    transition: transform 0.28s ease;
+    border-radius: 3px;
+    border: 2px solid #000000;
+}
+.checkbox label:after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 5px;
+    border-bottom: 2px solid #000000;
+    border-left: 2px solid #000000;
+    -webkit-transform: rotate(-45deg) scale(0);
+    -moz-transform: rotate(-45deg) scale(0);
+    -ms-transform: rotate(-45deg) scale(0);
+    transform: rotate(-45deg) scale(0);
+    position: absolute;
+    top: 10px;
+    left: 8px;
+}
+.checkbox input[type="checkbox"]:checked ~ label::before {
+    color: #000000;
+}
+
+.checkbox input[type="checkbox"]:checked ~ label::after {
+    -webkit-transform: rotate(-45deg) scale(1);
+    -moz-transform: rotate(-45deg) scale(1);
+    -ms-transform: rotate(-45deg) scale(1);
+    transform: rotate(-45deg) scale(1);
+}
+
+.checkbox label {
+    min-height: 34px;
+    display: block;
+    padding-left: 40px !important;
+    margin-bottom: 0;
+    font-weight: 500;
+    cursor: pointer;
+}
+.checkbox label span {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.checkbox input[type="checkbox"]:focus + label::before {
+    outline: 0;
+}
+/* @media screen and (max-width: 910px) and (min-width: 768px) {
+    h6 {
+        font-size: 15px;
+    }
+    .checkbox label {
+        font-size: 5px !important;
+    }
+} */
+@media screen and (max-width: 1190px) {
+    .checkbox label:before {
+        height: 15px;
+        width: 15px;
+    }
+    .checkbox label:after {
+        top: 9px;
+        left: 7px;
+    }
+
+    .checkbox label {
+        padding-left: 24px !important;
+        font-size: 13px !important;
+    }
+}

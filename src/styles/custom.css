@@ -1,0 +1,73 @@
+.aligner {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    /* justify-content: center; */
+}
+
+aside {
+    height: calc(100% - 0px);
+}
+
+aside head {
+    display: block;
+    z-index: 9;
+    margin-bottom: 2px;
+}
+.aligner-item {
+    width: 100%;
+    max-width: 100%;
+}
+
+.roomBookBtn {
+    width: 160px;
+    height: 40px;
+    background-color: #f73f5b;
+    border-style: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.disabledBtn {
+    width: 160px;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid;
+    color: #000;
+    cursor: not-allowed !important;
+}
+
+.personInfo__wrapper {
+    margin: 8px 0px;
+    border: 1px solid #f73f5b;
+    border-radius: 4px;
+    display: inline-flex;
+}
+
+.personInfo__icon {
+    line-height: 18px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    background-color: #f73f5b;
+    padding: 3px 10px;
+}
+
+.personInfo__text {
+    line-height: 18px;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: rgba(231, 3, 91, 0.13);
+    color: #f73f5b;
+    padding: 3px 18px;
+}
+
+.flat-title {
+    font-size: 26px;
+    font-weight: 500;
+    color: #f73f5b;
+}
+.warning-message {
+    color: #f73f5b !important;
+    font-size: 12px;
+}

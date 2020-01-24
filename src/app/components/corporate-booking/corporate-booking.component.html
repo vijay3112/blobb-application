@@ -1,0 +1,212 @@
+<div class="image" style="height:700px;margin-bottom: 30px">
+    <div class="container-fluid h-100 blur">
+        <div class="row h-100">
+            <div class="col-6"></div>
+            <div class="col-md-6 col-sm-12 col-12 ">
+                <div class="card stay" style="width:18rem">
+                    <h1 style="text-align:center;padding-top:15px;font-size:32px">Plan Your Stay</h1>
+                    <form class="login-form" novalidate autocomplete="off" [formGroup]="UserDetailsForm" ng-show="$select.searchEnabled">
+                        <div class="row padding20">
+                            <div class=" col-12">
+                                <div class="form-group">
+                                    <label style="font-size: 12px;">Name</label>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        name="corporateBooking_name"
+                                        [(ngModel)]="corporateBooking.name"
+                                        placeholder="Enter name"
+                                        formControlName="name"
+                                        required
+                                    />
+                                    <span class="error" *ngIf="UserDetailsForm.get('name').touched && UserDetailsForm.get('name').hasError('required')">
+                                        Name required
+                                    </span>
+                                </div>
+                            </div>
+                            <div class=" col-12">
+                                <div class="form-group">
+                                    <label style="font-size: 12px;">Email address</label>
+
+                                    <input
+                                        type="email"
+                                        class="form-control"
+                                        name="corporateBooking_email"
+                                        [(ngModel)]="corporateBooking.email"
+                                        formControlName="email"
+                                        required
+                                        placeholder="Enter email"
+                                    />
+                                    <span class="error" *ngIf="UserDetailsForm.get('email').touched && UserDetailsForm.get('email').hasError('required')">
+                                        Enter valid Email
+                                    </span>
+                                </div>
+                            </div>
+                            <div class=" col-12">
+                                <div class="form-group">
+                                    <label style="font-size: 12px;">Mobile</label>
+
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        name="corporateBooking_mobile"
+                                        [(ngModel)]="corporateBooking.mobile"
+                                        formControlName="mobile"
+                                        required
+                                        placeholder="Enter mobile number"
+                                    />
+                                    <span class="error" *ngIf="UserDetailsForm.get('mobile').touched && UserDetailsForm.get('mobile').hasError('required')">
+                                        Invalid Mobile Number
+                                    </span>
+                                </div>
+                            </div>
+                            <div class=" col-12">
+                                <div class="form-group">
+                                    <label style="font-size: 12px;">Company Name</label>
+
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        name="corporateBooking_companyName"
+                                        [(ngModel)]="corporateBooking.companyName"
+                                        formControlName="companyName"
+                                        required
+                                        placeholder="Enter company  name"
+                                    />
+                                    <span
+                                        class="error"
+                                        *ngIf="UserDetailsForm.get('companyName').touched && UserDetailsForm.get('companyName').hasError('required')"
+                                    >
+                                        Please enter Company Name
+                                    </span>
+                                </div>
+                            </div>
+                            <div style="margin: 1rem" *ngIf="startLoading">
+                                <apex-progress-bar type="loading"></apex-progress-bar>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="get-in-touch btn" [disabled]="!UserDetailsForm.valid" (click)="save()">SUBMIT</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="corporate">
+    <h1 class="business" data-aos="fade-up" data-aos-duration="1000">COMFORT FOR THE CORPORATE & BUSINESS ORIENTED</h1>
+    <hr id="basline" />
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="para">
+                            <p>Exclusive accommodation for corporate bookings at Blobb.</p>
+                            <p>
+                                Entrepreneurs, business persons and the corporate cliche are forever in a constant race towards being better. This timelessly
+                                involves a lot of travel, accommodation, irregular food patterns, and stress. Blobb service apartments for corporate booking
+                                caters specifically to calm and soothe the minds and bodies of the tiresome soul.
+                            </p>
+                            <p>
+                                With exquisite amenities and conveniently comfortable features, we offer a luxurious, relaxed and stress relieving personal
+                                space even while you’re on your business toes
+                            </p>
+                            <p>
+                                We assure your peace of mind cosied in the luxor of a home. With an atmosphere that not only relaxes and soothes the nerve but
+                                also revives and rejuvenates your mind and body boosting your confidence for the next conference. The service extended and care
+                                promised makes Blobb the most preferred and the best extended stay apartments in Hyderabad.
+                            </p>
+                            <p>
+                                Adding to this best is our unique feature of special deals for more number of people looking for a longer stay and going towards
+                                a new business venture. The in-house gourmet kitchen with a professional chef brings to your table the flavours of health,
+                                happiness and home.
+                            </p>
+                            <p>Because your purpose is our pleasure.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <img class="bis-img" src="../../../assets/img/corporate-banner.svg" style="width:100%;height:350px;margin-top:40px" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 class="business" data-aos="fade-up" data-aos-duration="1000">HERE’S HOW YOU BOOK YOUR HOMESTAY</h1>
+        <hr />
+        <p class="book">
+            It’s as simple as booking an evening show. 3 steps to your happy home stay. Rest assured, you’ll feel the best.
+        </p>
+        <div class="row text-center">
+            <div class="col-md-12">
+                <div class="row img">
+                    <div class="col-lg-12 col-xl-4">
+                        <div class="row">
+                            <div class="col-lg-12  col-xl-10">
+                                <img src="../../../assets/icons/calendar.png" style="height:48px;width:48px" />
+                            </div>
+                            <div class="col-lg-12  col-xl-2">
+                                <img
+                                    class="arrow"
+                                    src="../../../assets/icons/arrow-pointing-to-right.svg"
+                                    style="width:40px;height:25px;margin-top:10px; 
+                                "
+                                />
+                            </div>
+                        </div>
+                        <h3 style="font-size:18px;padding-top:30px;font-weight:600;text-align: center">CONFIRM THE DATES</h3>
+                        <p style="font-size:14px;padding-top:15px;font-weight:400;text-align: center">
+                            Select your best check-in and check-out dates and confirm your most awaited trip to Hyderabad.
+                        </p>
+                    </div>
+                    <div class="col-lg-12 col-xl-4">
+                        <div class="row">
+                            <div class=" col-lg-12  col-xl-10">
+                                <img src="../../../assets/icons/home.png" style="height:48px;width:48px" />
+                            </div>
+                            <div class="col-lg-12  col-xl-2">
+                                <img class="arrow" src="../../../assets/icons/arrow-pointing-to-right.svg" style="width:40px;height:25px;margin-top:10px" />
+                            </div>
+                        </div>
+                        <h3 style="font-size:18px;padding-top:30px;font-weight:600">LOOK FOR BLOBB IN & AROUND YOUR LOCATION</h3>
+                        <p style="font-size:14px;padding-top:15px;font-weight:400;padding-bottom: 10px">
+                            Look for your best preferred location, we’re in Banjara Hills, Jubilee Hills and Gachibowli.
+                        </p>
+                    </div>
+                    <div class="col-lg-12 col-xl-4 ">
+                        <div class="row">
+                            <div class="col-lg-12 col-xl-10 ">
+                                <img src="../../../assets/icons/success.png" style="height:48px;width:48px" />
+                            </div>
+                        </div>
+                        <h3 style="font-size:18px;padding-top:30px;font-weight:600">SELECT A PLACE & AWAIT YOUR BEST STAY EVER</h3>
+                        <p style="font-size:14px;padding-top:15px;font-weight:400;padding-bottom: 10px">
+                            Confirm the property and book your incredible homestay with Blobb. Your comfort is your choice.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2
+        style="text-align: center;
+font-size: 32px;font-weight: 500;
+"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+    >
+        Gallery
+    </h2>
+    <hr class="head" />
+    <p class="pen">Explore what’s real and soul soothing.</p>
+    <div class="gallery">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 ">
+                    <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

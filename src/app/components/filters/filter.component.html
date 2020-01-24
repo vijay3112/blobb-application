@@ -1,0 +1,29 @@
+<div class="card">
+    <div class="list-group filter-wrap">
+        <article class="list-group-item">
+            <div class="filter-header">
+                <a href="#" data-toggle="collapse" data-target="#collapse">
+                    <h5>Filters</h5>
+                    <hr />
+                    <i class="icon-action fa fa-chevron-down" style="display:inline-block"></i>
+                    <h6 class="title">Location</h6>
+                </a>
+            </div>
+            <div class="filter-content collapse show locations" id="collapse">
+                <ul class="btn  dropdown" style="text-align:start !important; text-transform: uppercase ">
+                    <li class="checkbox" *ngFor="let item of propertyList">
+                        <input
+                            type="checkbox"
+                            id="{{ item.val }}"
+                            (change)="propertyFilterList(item.val, $event.target.checked)"
+                            [checked]="checked(item.val)"
+                        />
+                        <label for="{{ item.val }}">
+                            {{ item.name }}
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </article>
+    </div>
+</div>

@@ -1,0 +1,516 @@
+<!-- <div class="container  mb-5">
+    <div class="card " style="margin-top: 100px;">
+        <div class="card-body">
+            <div id="row1" class="row review1">
+                <div class="col col-sm-12 offset-md-1 pt-5">
+                    <h5>Review Your Booking:</h5>
+                </div>
+            </div>
+            <hr />
+            <div id="row2">
+                <div class="row review2">
+                    <div class="col offset-md-1">
+                        <h5>1.Review hotel details:</h5>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col  offset-md-1">
+                        <div id="details-card" class="card">
+                            <div class="card-body">
+                                <div class="price-content">
+                                    <div class="row wrap">
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>Booking Type:</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>Online</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>Booking Date:</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>{{ item.bookingDate | date }}</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>Booking Id:</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>{{ item.bookingRef }}</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>Name:</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>{{ item.name }}</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>Email:</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>{{ item.email }}</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>Mobile:</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>{{ item.mobile }}</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>Flat No:</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>{{ item.flatNo }}</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>Room No:</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>{{ item.roomNo }}</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>Location:</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>{{ item.propertyName }}</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>Guests:</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>{{ item.roomPersons }}</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>Payment Mode:</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>{{ item.paymentMode }}</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>Payment Amount:</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>{{ item.paymentAmount | currency }}</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>Check In:</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>12:00 AM {{ item.checkIn | date }}</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>Check Out:</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>11:59 PM {{ item.checkOut | date }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+<!-- <div class="row">
+                    <div class="col  offset-md-1">
+                        <div id="details-card" class="card">
+                            <div class="card-body">
+                                <div class="row price-card-align">
+                                    <div class=" d-flex justify-content-between col">
+                                        <div class="price-content">
+                                            <p>Booking Type:</p>
+                                            <p>Booking Date:</p>
+                                            <p>Booking Id:</p>
+                                            <p>Name:</p>
+                                            <p>Email:</p>
+                                            <p>Mobile:</p>
+                                            <p>Payment Mode:</p>
+                                            <p>Payment Amount:</p>
+                                            <p>Check In:</p>
+                                            <p>Check Out:</p>
+                                        </div>
+                                        <div class="price-content">
+                                            <p>Online</p>
+                                            <p>{{ item.bookingDate | date }}</p>
+                                            <p>{{ item.bookingRef }}</p>
+                                            <p>{{ item.name }}</p>
+                                            <p>{{ item.email }}</p>
+                                            <p>{{ item.mobile }}</p>
+                                            <p>{{ item.paymentMode }}</p>
+                                            <p>{{ item.paymentAmount | currency }}</p>
+                                            <p>12:00 AM {{ item.checkIn | date }}</p>
+                                            <p>11:59 PM {{ item.checkOut | date }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+<!-- <div class="row">
+                    <div class="col offset-md-1">
+                        <h5>Cancellation Policy:</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col  offset-md-1">
+                        <div id="can-card" class="card">
+                            <div class="can-period " style="background-color:gray; ">
+                                <p class="float-left " style="margin-top: 6px; margin-left: 3%">Cancellation period</p>
+                                <p class="float-right " style="margin-top: 6px; margin-right: 3%;color: white">Cancellation Fee</p>
+                            </div>
+                            <div class="can-cont card-body">
+                                <p>
+                                    If you cancel within 48 hours before checkin, you will incur 100.0% of your total stay.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col offset-md-1">
+                        <div class="content">
+                            <p>* that dates are aplicable to local time zone</p>
+                            <p>* in case of no shows and Cancelation later</p>
+                            <h6>2.Please ensure that the names of all Customers match with their ID Proof/passport</h6>
+                            <p>* Guest 1: {{ item.name }} (Edit)</p>
+                            <h6>3.Review the terms of your booking:</h6>
+                            <p>* Please read the Terms &amp; Conditions.</p>
+                            <p>
+                                * Blobb.in recommends that all customers check the validity of their passport and obtain the <br />visa and the trips they
+                                intend to visit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-- <=========================================2nd template ======================================> -->
+
+<!-- <section>
+    <div class="bg-img" align="center">
+        <h4>Your booking has been confirmed for BLOBB.</h4>
+    </div>
+    <div class="container mt-5">
+        <div class="billing-section">
+            <div class="booking-details">
+                <div class="row">
+                    <div class="col">
+                        <div class="inside-header">
+                            <h5 class="pl-4 p-2">Booking Details</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="booking-details-content card-body mt-3">
+                    <div class="row justify-content-around">
+                        <div class="col-md-2 col-sm-5 col-5 ">
+                            <h6>Check-In Date</h6>
+                            <p>{{ item.checkIn | date }} | 12:00 AM</p>
+                        </div>
+                        <div class="col-md-2 col-sm-5 col-5">
+                            <h6>Check-Out Date</h6>
+                            <p>{{ item.checkOut | date }} | 11:59 PM</p>
+                        </div>
+                        <div class="col-md-2 col-sm-5 col-5">
+                            <h6>Blobb Location</h6>
+                            <p>{{ item.propertyName }}</p>
+                        </div>
+                        <div class="col-md-2 col-sm-5 col-5">
+                            <h6>Accomodation Type</h6>
+                            <p>Suite</p>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-around ">
+                        <div class="col-md-2 col-sm-5 col-5">
+                            <h6>Total Rooms</h6>
+                            <p>01</p>
+                        </div>
+                        <div class="col-md-2 col-sm-5 col-5">
+                            <h6>Total Days</h6>
+                            <p>01</p>
+                        </div>
+                        <div class="col-md-2 col-sm-5 col-5">
+                            <h6>Flat No</h6>
+                            <p>{{ item.flatNo }}</p>
+                        </div>
+                        <div class="col-md-2 col-sm-5 col-5">
+                            <h6>Room No</h6>
+                            <p>{{ item.roomNo }}</p>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-around ">
+                        <div class="col-md-2 col-sm-5 col-5">
+                            <h6>Booking Date</h6>
+                            <p>{{ item.bookingDate | date }}</p>
+                        </div>
+                        <div class="col-md-2 col-sm-5 col-5">
+                            <h6>Booking Type</h6>
+                            <p>Online</p>
+                        </div>
+                        <div class="col-md-2 col-sm-5 col-5">
+                            <h6>Booking Id</h6>
+                            <p>{{ item.bookingRef }}</p>
+                        </div>
+                        <div class="col-md-2 col-sm-5 col-5">
+                            <h6>Total Amount</h6>
+                            <p>{{ item.paymentAmount | currency }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="customer-details">
+                <div class="row">
+                    <div class="col">
+                        <div class="inside-header">
+                            <h5 class="pl-4 p-2">Customer Details</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="customer-details-content card-body mt-3 ">
+                    <div class="row justify-content-around">
+                        <div class="col-md-3 col-sm-10 col-10">
+                            <h6>Name</h6>
+                            <p>{{ item.name }}</p>
+                        </div>
+                        <div class="col-md-3 col-sm-10 col-10">
+                            <h6>Contact Number</h6>
+                            <p>{{ item.mobile }}</p>
+                        </div>
+                        <div class="col-md-3 col-sm-10 col-10">
+                            <h6>Email Id</h6>
+                            <p>{{ item.email }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="instructions-part mt-4">
+            <div class="row pb-3">
+                <div class="col">
+                    <h5 style="color:#f73f5b">Instructions</h5>
+                </div>
+            </div>
+            <div class="row pl-3">
+                <div class="col">
+                    <ul>
+                        <li>
+                            Please ensure that the names of all customers match with their valid ID Proof. The ID proofs accepted are Driving license, Voter ID,
+                            Passport, and Aadhar card.
+                        </li>
+                        <li>The dates are applicable as per Indian Standard Time(IST).</li>
+                        <li>Any cancellations need to be informed 48 hours in advance in order to get a 100 % refund.</li>
+                        <li>Please read the TERMS OF SERVICE for further clarifications.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<!-- ======================================= 3rd template ======================================= -->
+
+<section>
+    <div class="bg-img" align="center">
+        <h4>Your booking has been confirmed for BLOBB.</h4>
+    </div>
+
+    <div class="container mt-3 mb-5">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="row p-2">
+                    <div class="col-md-6 col-lg-3 col-xl-3 col-sm-6 col-6">
+                        <h6 style="font-size: 15px">Booking Date:</h6>
+                    </div>
+                    <div class="col-md-6 col-lg-3 col-xl-3 col-sm-6 col-6">
+                        <p>{{ item.bookingDate | date }}</p>
+                    </div>
+                    <!-- <div class="col-md-6 col-lg-3 col-xl-3 col-sm-6 col-6">
+                        <h6 style="font-size: 15px">Invoice No:</h6>
+                    </div>
+                    <div class="col-md-6 col-lg-3 col-xl-3 col-sm-6 col-6">
+                        <p>{{ item.invoice }}</p>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-7 well">
+                <div class="grid-container-2">
+                    <div class="part-1">
+                        <h6 class="text-center box-in-header p-2">Customer Details</h6>
+                        <div class="row card-body">
+                            <div class="col">
+                                <h5>{{ item.name }}</h5>
+                                <h5>{{ item.mobile }}</h5>
+                                <h5>{{ item.email }}</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part-2">
+                        <h6 class="text-center box-in-header p-2">Booking Details</h6>
+                        <div class="col card-body details">
+                            <!-- <div class="row">
+                                <div class="col">
+                                    <h6>Booking Date:</h6>
+                                </div>
+                                <div class="col">
+                                    <p>{{ item.bookingDate | date }}</p>
+                                </div>
+                            </div> -->
+                            <div class="row">
+                                <div class="col">
+                                    <h6>Check-In Date:</h6>
+                                </div>
+                                <div class="col">
+                                    <p>{{ item.fromDate | datetime }}</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <h6>Check-Out Date:</h6>
+                                </div>
+                                <div class="col">
+                                    <p>{{ item.toDate | datetime }}</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <h6>No of Days:</h6>
+                                </div>
+                                <div class="col">
+                                    <p>{{ item.units }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="instructions-part mt-4 d-none d-md-block d-lg-block d-xl-block">
+                    <div class="row pb-3">
+                        <div class="col">
+                            <h5 style="color:#f73f5b">Instructions</h5>
+                        </div>
+                    </div>
+                    <div class="row pl-3">
+                        <div class="col">
+                            <ul>
+                                <li>
+                                    Please ensure that the names of all customers match with their valid ID Proof. The ID proofs accepted are Driving license,
+                                    Voter ID, Passport, and Aadhar card.
+                                </li>
+                                <li>The dates are applicable as per Indian Standard Time(IST).</li>
+                                <li>Any cancellations need to be informed 48 hours in advance in order to get a 100 % refund.</li>
+                                <li>Please read the TERMS OF SERVICE for further clarifications.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 well">
+                <div class="cus-bkg-section">
+                    <div class="text-center box-in-header p-2">
+                        <h5>Room Details</h5>
+                    </div>
+
+                    <div *ngFor="let item of items" class="col pt-4">
+                        <div class="row   mx-auto">
+                            <div class="col"><h5>Booking ID:</h5></div>
+                            <div class="col">
+                                <p>{{ item.id }}</p>
+                            </div>
+                        </div>
+                        <div class="row  mx-auto">
+                            <div class="col"><h5>Blobb Location:</h5></div>
+                            <div class="col">
+                                <p>{{ item.room.property.name }}</p>
+                            </div>
+                        </div>
+                        <!-- <div class="row  mx-auto">
+                            <div class="col">
+                                <h5>Flat No</h5>
+                            </div>
+                            <div class="col">
+                                <p>{{ item.room.name }} </p>
+                            </div> 
+                        </div> -->
+                        <div class="row  mx-auto">
+                            <div class="col">
+                                <h5>Room No</h5>
+                            </div>
+                            <div class="col">
+                                <p>{{ item.room.name }} - {{ item.room.type }}</p>
+                            </div>
+                        </div>
+                        <div class="row  mx-auto">
+                            <div class="col">
+                                <h5>{{ item.payment.cost | currency }} * {{ item.payment.units }}Day's</h5>
+                            </div>
+                            <div class="col">
+                                <p>{{ item.payment.price | currency }}</p>
+                            </div>
+                        </div>
+
+                        <div class="row  mx-auto">
+                            <div class="col">
+                                <h5>CGST({{ item.payment.cgst }}%)</h5>
+                            </div>
+                            <div class="col">
+                                <p>{{ item.payment.cgstPrice | currency }}</p>
+                            </div>
+                        </div>
+                        <div class="row  mx-auto">
+                            <div class="col">
+                                <h5>SGST ({{ item.payment.sgst }}%)</h5>
+                            </div>
+                            <div class="col">
+                                <p>{{ item.payment.sgstPrice | currency }}</p>
+                            </div>
+                        </div>
+
+                        <div class="row  mx-auto">
+                            <div class="col"><h5>Total</h5></div>
+                            <div class="col">
+                                <p>{{ item.payment.amount | currency }}</p>
+                            </div>
+                        </div>
+                        <hr style="border: 0.5px solid black;margin-left:-16px;margin-right:-16px" />
+                    </div>
+                    <!-- <div class="row mx-auto pr-2">
+                        <div class="col"><h5 class="pl-5">Grand Total</h5></div>
+                        <div class="col">
+                            <p>{{ item.paymentAmount | currency }}</p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="instructions-part mt-4 d-md-none d-xl-none d-lg-none">
+            <div class="row pb-3">
+                <div class="col">
+                    <h5 style="color:#f73f5b">Instructions</h5>
+                </div>
+            </div>
+            <div class="row pl-3">
+                <div class="col">
+                    <ul>
+                        <li>
+                            Please ensure that the names of all customers match with their valid ID Proof. The ID proofs accepted are Driving license, Voter ID,
+                            Passport, and Aadhar card.
+                        </li>
+                        <li>The dates are applicable as per Indian Standard Time(IST).</li>
+                        <li>Any cancellations need to be informed 48 hours in advance in order to get a 100 % refund.</li>
+                        <li>Please read the TERMS OF SERVICE for further clarifications.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================template =================================== -->

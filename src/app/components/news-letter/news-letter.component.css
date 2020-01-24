@@ -1,0 +1,112 @@
+/* .about {
+    margin-top: 15px !important;
+} */
+h1 {
+    padding-top: 70px;
+    padding-bottom: 15px;
+}
+h2 {
+    padding-bottom: 15px;
+}
+.int {
+    width: 260px;
+    height: 50px;
+    border-radius: 2px;
+    border: solid 0.5px #d1d1d1;
+    padding-left: 40px;
+}
+input {
+    font-size: 13px;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+    color: #7c7c7c;
+}
+@media only screen and (max-width: 600px) {
+    .int {
+        width: 230px;
+        height: 50px;
+        border-radius: 2px;
+        border: solid 0.5px #d1d1d1;
+    }
+    .end {
+        margin-bottom: 10px !important;
+    }
+}
+
+@media only screen and (max-width: 434px) {
+    h1 {
+        padding-top: 40px;
+        padding-bottom: 7px;
+        font-size: 22px !important;
+    }
+    h2 {
+        padding-bottom: 10px;
+        font-size: 13px !important;
+    }
+    input {
+        margin-bottom: 20px;
+    }
+    .btn {
+        margin-bottom: 40px;
+    }
+}
+@media only screen and (max-width: 340px) {
+    h1 {
+        padding-top: 80px !important;
+    }
+    .newsletter {
+        margin-right: 20px !important;
+    }
+}
+.btn {
+    width: 150px;
+    height: 50px;
+    border-radius: 0 2px 2px 0;
+    background-color: #f73f5b;
+    text-align: center;
+    position: relative;
+    right: 3px;
+    bottom: 0.7px;
+    outline: none;
+    border: none;
+}
+
+.sign-me-up {
+    height: 15px;
+    font-family: HammersmithOne;
+    /* font-size: 12px; */
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+}
+img {
+    height: 20px;
+    width: 20px;
+    /* z-index: 1; */
+    vertical-align: middle;
+    position: relative;
+    left: 30px;
+}
+.end {
+    margin-bottom: 30px;
+}
+span {
+    color: red !important;
+    font-size: 12px;
+    content: "*";
+    display: inline;
+    padding-left: 10px;
+}
+span:after {
+    color: red !important;
+    font-size: 12px;
+    content: "*";
+    display: inline;
+}
+
+/* .container {
+    margin-top: 30px;
+} */

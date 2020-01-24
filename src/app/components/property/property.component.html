@@ -1,0 +1,76 @@
+<div class="head0" style="margin-top:50px">
+    <h1>Where do you want to go?</h1>
+    <hr class="head" />
+    <p
+        class="text-center"
+        style="
+    font-size: 16px;color: #555555;margin-top: 20px;margin-bottom:30px"
+    >
+        We recommend you the next destinations with<br />
+        a sweet discounted price
+    </p>
+</div>
+<!-- <div align="center">
+    <div class="container">
+        <div class="row">
+            <ng-container *ngFor="let item of propertyList">
+                <div class="col-md-6 col-sm-12 col-lg-4 col-xl-4">
+                    <div class="align1">
+                        <div style="position:relative;top:235px">
+                            <label class="blar" style="padding-top:16px;">
+                                {{ item.name }}
+                            </label>
+                            <button class="btn" style="border-style:none;position:relative;bottom:2px" (click)="edit(item.val)">
+                                <img src="../../../assets/icons/arrow-right.png" height="30px;" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div> -->
+
+<!-- <div align="center">
+    <div class="container">
+        <div class="row">
+            <ng-container *ngFor="let item of cards">
+                <div class="col-md-6 col-sm-12 col-lg-4 col-xl-4">
+                    <div class="cards">
+                        <img class="align" [src]="item.imageUrl" alt="{{ item.altImg }}" />
+                        <label class="blar">
+                            {{ item.name }}
+                        </label>
+                        <button class="btn" style="border-style:none;" [routerLink]="item.routerLink">
+                            <img src="../../../assets/icons/arrow-right.png" height="30px;" />
+                        </button>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div> -->
+
+<div align="center">
+    <div class="container">
+        <div class="row property-list">
+            <ng-container *ngFor="let item of cards">
+                <div class="col-md-6 col-sm-12 col-lg-4 col-xl-4">
+                    <div class=" align" data-aos="fade-up" data-aos-duration="1000">
+                        <img [src]="item.imageUrl" alt="{{ item.altImg }}" />
+                        <label class="blar">
+                            {{ item.name }}
+                        </label>
+                        <button class="btn" style="border-style:none;" [routerLink]="item.routerLink">
+                            <img
+                                style=" height: 30px !important;
+                            width: 30px !important;"
+                                src="../../../assets/icons/arrow-right.png"
+                            />
+                        </button>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>

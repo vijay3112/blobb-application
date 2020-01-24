@@ -1,0 +1,116 @@
+hr {
+    width: 250px;
+    height: 5px;
+    border-radius: 6px;
+    background-image: linear-gradient(89deg, #f73f5b, #263840);
+    text-align: center;
+    margin: auto;
+}
+.look {
+    background-image: url("../../../assets/img/look.png");
+    color: white;
+    height: 270px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+.para {
+    text-align: start;
+}
+img {
+    /* width: 100%; */
+    margin-bottom: 70px;
+    height: 300px;
+    padding-top: 30px;
+}
+@media screen and (max-width: 500px) {
+    .para {
+        width: auto !important;
+        padding: 0 20px;
+    }
+    img {
+        height: 240px;
+    }
+    h1 {
+        padding-top: 15px !important;
+    }
+    img {
+        margin-bottom: 40px !important;
+    }
+}
+@media screen and (min-width: 1400px) {
+    .max {
+        max-width: 1300px !important;
+    }
+}
+.heading {
+    font-size: 55px;
+    font-weight: bold;
+}
+@media screen and (max-width: 923px) and (min-width: 693px) {
+    .heading {
+        font-size: 40px;
+    }
+    .look {
+        height: 200px;
+    }
+}
+@media screen and (max-width: 960px) {
+    img {
+        padding-top: 0px !important;
+    }
+}
+
+@media screen and (max-width: 692px) {
+    .heading {
+        font-size: 30px;
+    }
+    .look {
+        height: 170px;
+    }
+}
+@media screen and (max-width: 535px) {
+    .heading {
+        font-size: 20px;
+    }
+    .look {
+        height: 150px;
+    }
+    .para b {
+        font-size: 20px !important;
+    }
+    p {
+        font-size: 15px !important;
+    }
+}
+@media screen and (max-width: 400px) {
+    .heading {
+        font-size: 17px;
+    }
+}
+@media screen and (max-width: 740px) {
+    h1 {
+        font-size: 25px !important;
+    }
+    hr {
+        height: 3px;
+        width: 217px;
+    }
+    .padding5 h1 {
+        font-size: 18px !important;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .max {
+        margin-right: 25px !important;
+    }
+    .heading {
+        margin-right: 25px !important;
+        font-size: 14px !important;
+    }
+    .head {
+        margin-right: 25px !important;
+    }
+}

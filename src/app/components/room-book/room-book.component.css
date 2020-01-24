@@ -1,0 +1,27 @@
+.form-control {
+    font-size: 13px !important;
+    background-color: white !important;
+}
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.round {
+    color: #f73f5b;
+    font-size: 1.5em;
+}
+@media screen and (max-width: 1199px) and (min-width: 576px) {
+    .gap {
+        margin-top: 50px !important;
+    }
+}
+@media screen and (max-width: 575px) {
+    .gap {
+        margin-left: 15px;
+    }
+}
+
+.warning-message {
+    font-weight: 400 !important;
+}

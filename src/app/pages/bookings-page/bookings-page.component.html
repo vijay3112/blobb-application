@@ -1,0 +1,341 @@
+<div class="banner-image">
+    <div class="container-fluid h-100 blur">
+        <div class="row h-100">
+            <div class="col-md-12 banner-text ">
+                <h1>BLOBB {{ property.name }}</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<form #myForm="ngForm" novalidate autocomplete="off">
+    <div class="card1" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius: 4px;margin:0 15px 15px">
+        <div class="row d-flex justify-content-center dates" style="padding-top:20px;padding-left: 30px;">
+            <div class="col-lg-9 col-md-10 col-sm-11 col-xl-4">
+                <app-room-book
+                    [roomBook]="roomBook"
+                    [personsSelectionObj]="personsSelectionObj"
+                    (outputPeriodOnChange)="onChangePeriod($event)"
+                    (outputPerosnsOnChange)="onChangePersons($event)"
+                >
+                </app-room-book>
+            </div>
+            <div class="col-lg-9 col-md-10 col-sm-11 col-xl-8">
+                <div class="row  aligner-item">
+                    <div class="col-lg-12 col-xl-5 aligner">
+                        <div class="col-md-12 col-sm-12 col-12">
+                            <div class="row">
+                                <div class="col-xl-7 col-lg-8 col-md-7 col-sm-7 col-6" style="margin: 0 0 16px 0">
+                                    <span class="room">Selected Rooms</span>
+                                    <a *ngIf="myForm.valid && goForReview" data-toggle="modal" data-target="#exampleModalCenter" style="margin: 0 0 0 10px"
+                                        ><img src="../../../assets/icons/external-link-symbol.svg" height="16px" />
+                                    </a>
+                                </div>
+                                <div class="col-xl-5 col-lg-4 col-md-5 col-sm-5 col-6">
+                                    <span style="color:#f73f5b;font-size:16px; font-weight: 500">{{ selectedRooms }}</span>
+                                </div>
+                                <!-- <div class="col-xl-2 col-lg-4 col-md-2 col-sm-2 col-2" *ngIf="myForm.valid && goForReview">
+                                    <a data-toggle="modal" data-target="#exampleModalCenter"><i class="fas fa-external-link-alt"></i></a>
+                                </div> -->
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-7 col-lg-8 col-md-7 col-sm-7 col-6">
+                                    <p class="price-section">Rooms Price</p>
+                                </div>
+                                <div class="col-xl-5 col-lg-4 col-md-5 col-sm-5 col-6">
+                                    <span class="price">{{ totalPrice | currency }}</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-7 col-lg-8 col-md-7 col-sm-7 col-6">
+                                    <p class="price-section">SGST Price</p>
+                                </div>
+                                <div class="col-xl-5 col-lg-4 col-md-5 col-sm-5 col-6">
+                                    <span class="price">{{ totalSgstPrice | currency }}</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-7 col-lg-8 col-md-7 col-sm-7 col-6">
+                                    <p class="price-section">CGST Price</p>
+                                </div>
+                                <div class="col-xl-5 col-lg-4 col-md-5 col-sm-5 col-6">
+                                    <span class="price">{{ totalCgstPrice | currency }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-1"> -->
+                    <div class="vertical-line d-none d-block"></div>
+                    <!-- </div> -->
+
+                    <div class="col-xl-4 col-lg-12 aligner">
+                        <div class="col-lg-12 col-sm-12 col-12">
+                            <div class="row">
+                                <div class="col-xl-4 col-lg-8 col-md-7 col-sm-7 col-6">
+                                    <p class="price-section" style="font-size:17px">
+                                        Total
+                                    </p>
+                                </div>
+
+                                <div class="col-xl-8 col-lg-4 col-md-5 col-sm-5 col-6">
+                                    <span class="total-price">{{ TotalAmount | currency }}</span>
+                                </div>
+                            </div>
+                            <p class="warning-message" style="font-weight: 400">
+                                *included tax and fees
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-xl-2 col-sm-12 col-12 d-flex justify-content-center aligner" style="margin-bottom:40px;">
+                        <div class="row">
+                            <div>
+                                <button
+                                    class="roomBookBtn aligner-item "
+                                    style="cursor: pointer;border-radius:2px;margin: auto"
+                                    (click)="review()"
+                                    [ngClass]="myForm.valid && goForReview ? 'roomBookBtn' : 'disabledBtn'"
+                                    [disabled]="!myForm.valid || !goForReview"
+                                >
+                                    Review
+                                </button>
+                            </div>
+                            <span
+                                class="warning-message col-12 col-sm-12 "
+                                style="font-weight: 400;margin-top: 10px;text-align: center"
+                                *ngIf="!myForm.valid || !goForReview"
+                            >
+                                *no room selected yet
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" *ngIf="quickProfileAndPay">
+        <div class="row">
+            <div class="col-md-12">
+                <hr class="line" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-7 col-lg-8 now">
+                <app-profile type="quick" [profile]="profile" (outputEvent)="profileSave($event)"></app-profile>
+            </div>
+            <div class="col-md-5 col-lg-4 paynow">
+                <div class="padding-half-lr">
+                    <!-- <button
+                        class="roomBookBtn"
+                        style="cursor: pointer"
+                        (click)="bookNow()"
+                        [ngClass]="myForm.valid && isARoomSelected ? 'roomBookBtn' : 'disabledBtn'"
+                        [disabled]="!myForm.valid || !isARoomSelected"
+                    >
+                        BOOK NOW
+                    </button> -->
+                    <!-- <app-stripe-payment (outputEvent)="pay($event)"></app-stripe-payment> -->
+
+                    <!-- <button
+                        type="submit"
+                        style="margin-bottom: 1rem"
+                        [disabled]="!myForm.valid"
+                        class="paybtn pull-left"
+                        (click)="bookNow()"
+                        *ngIf="!startLoading"
+                    >
+                        <span>PAY NOW</span>
+                    </button> -->
+                    <button
+                        type="submit"
+                        style="margin-bottom: 1rem"
+                        [disabled]="!myForm.valid"
+                        class="paybtn pull-left"
+                        (click)="checkOut($event)"
+                        *ngIf="!startLoading"
+                    >
+                        <span>Pay At BLOBB</span>
+                    </button>
+                    <!-- <razor-pay
+                        *ngIf="!startLoading"
+                        [isValid]="myForm.valid && profile && profile.id"
+                        [amount]="TotalAmount"
+                        [profile]="profile"
+                        (onPayment)="bookNow($event)"
+                    ></razor-pay> -->
+                    <div style="margin: 1rem" *ngIf="startLoading">
+                        <apex-progress-bar type="loading"></apex-progress-bar>
+                    </div>
+                    <button type="submit" style="margin-bottom: 1rem " class="paybtn pull-right" (click)="cancel()" *ngIf="!startLoading">
+                        <span>CANCEL</span>
+                    </button>
+                    <!-- [enablePay]="enablePay" -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <app-filter></app-filter> -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 col-lg-3 d-none d-sm-block d-xs-block">
+                <app-filter (outputFilteredPropertyList)="applyFilter($event)" [(filterPropertyList)]="propertyIds"> </app-filter>
+            </div>
+            <div class="col-md-8 col-lg-9 ">
+                <div>
+                    <div *ngIf="flatList && flatList.length > 0; then recordFound; else noRecordFound"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<ng-template #recordFound>
+    <div class="row">
+        <div class="col-lg-10 col-9 flats-text">
+            <h4>We found {{ flatList.length }} Flats available</h4>
+        </div>
+        <div class="col-lg-2 col-3" *ngIf="isARoomSelected" class="count">
+            <countdown [config]="{ leftTime: 300 }" (finished)="onFinished()">
+                $!m!:$!s!
+            </countdown>
+        </div>
+    </div>
+    <div *ngFor="let flat of flatList">
+        <div class="margin-half">
+            <label class=" accent-color pointer" for="{{ flat.name }}" [class.checkbox]="!flat.disabledFlatCheck">
+                <input
+                    [type]="flat.disabledFlatCheck ? 'hidden' : 'checkbox'"
+                    id="{{ flat.name }}"
+                    [disabled]="flat.disabledFlatCheck"
+                    (click)="selectWholeFlat(flat, $event.target.checked)"
+                />
+                <span class="flat-title"> {{ flat.name }} - {{ flat.property.name }} </span>
+            </label>
+        </div>
+        <div
+            class="inActivecard"
+            *ngFor="let item of flat.roomBookList"
+            [ngClass]="{ 'active-card': item.isSelected }"
+            [style.backgroundColor]="item.room.isLock ? 'rgba(0,0,0,0.1)' : 'unset'"
+        >
+            <div class="container-fluid ">
+                <div class="row margin-one-tb ">
+                    <div class=" col-lg-12 col-xl-8 padding-half-tb">
+                        <app-room [room]="item.room" (toggleDetailsEvent)="toogleDetails($event)"></app-room>
+                    </div>
+                    <div class=" col-lg-12 col-xl-4 padding-half-tb ">
+                        <div class="row">
+                            <div class="col-md-12" style="padding: 0px 30px;color: bold;font-weight: bold;">Days : {{ item.payment.units }}</div>
+                        </div>
+                        <div>
+                            <app-payment type="room_payment" [payment]="item.payment"></app-payment>
+                        </div>
+                        <div>
+                            <div class="row" *ngIf="!item.room.isLock && !item.isRoomLockedInCache">
+                                <button
+                                    class="inActive"
+                                    [ngClass]="{ active: item.isSelected }"
+                                    (click)="lockOrUnlockRoom(item)"
+                                    style="cursor: pointer;margin: auto;border-radius:2px"
+                                >
+                                    {{ item.isSelected ? "SELECTED" : "Book" }}
+                                </button>
+                            </div>
+                            <div class="row" *ngIf="item.room.isLock">
+                                <button class="inActive" disabled style="background-color: #5a5a5a; color: #f73f5b;margin: auto;">
+                                    Booked
+                                </button>
+                            </div>
+                            <div class="row" *ngIf="item.isRoomLockedInCache">
+                                <button class="inActive" disabled style="background-color:#5a5a5a; color: white;margin: auto;">
+                                    Not Available
+                                </button>
+                                <p class="warning-message col-12 text-center">
+                                    *please come back again room is currently unavailable
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="item.room.id === showDetails.roomId">
+                <div *ngIf="showDetails.roomDetailName === 'roomDetails'; then roomDetails"></div>
+                <div *ngIf="showDetails.roomDetailName === 'locationDetails'; then locationDetails"></div>
+                <div *ngIf="showDetails.roomDetailName === 'clearDetails'"></div>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #roomDetails>
+    <app-room-details (toggleDetailsEvent)="toogleDetails($event)"></app-room-details>
+</ng-template>
+
+<ng-template #locationDetails>
+    <app-room-location (toggleDetailsEvent)="toogleDetails($event)"></app-room-location>
+</ng-template>
+
+<ng-template #noRecordFound>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div *ngIf="flatList">
+                    <no-record-found></no-record-found>
+                </div>
+                <div *ngIf="!flatList" style="margin-top: 100px;">
+                    <apex-progress-bar type="loading"></apex-progress-bar>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" style="width: 380px;height: 500px;">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">Selected Rooms List</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-head" style="overflow-y: auto;padding-left: 10px">
+                <ol>
+                    <div class="modal-body" *ngFor="let item of bookedRooms">
+                        <li>
+                            <div class="col-md-12 col-sm-12 col-12">
+                                <div class="row" style="color:#f73f5b;font-weight: 500">
+                                    {{ item.room.property.name }}
+                                </div>
+                            </div>
+                        </li>
+                        <div class="col-md-12 col-sm-12 col-12">
+                            <div class="row">
+                                <div class="col-6">
+                                    <span class="room">Flat:</span>
+                                </div>
+                                <div class="col-6 ">
+                                    <span style="color:#f73f5b;font-size:16px; font-weight: 500">{{ item.room.flat.name }}</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <span class="room">Room No:</span>
+                                </div>
+                                <div class="col-6 ">
+                                    <span style="color:#f73f5b;font-size:16px; font-weight: 500">{{ item.room.name }}</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <span class="room">Room Amount:</span>
+                                </div>
+                                <div class="col-6 ">
+                                    <span style="color:#f73f5b;font-size:16px; font-weight: 500">{{ item.amount | currency }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>

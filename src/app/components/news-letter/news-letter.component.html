@@ -1,0 +1,41 @@
+<div class="newsletter">
+    <div class="container text-center ">
+        <form class="login-form" novalidate autocomplete="off" [formGroup]="DetailsForm" ng-show="$select.searchEnabled">
+            <div class="row" data-aos="fade-left" data-aos-duration="1000">
+                <div class="col-md-12">
+                    <h1 style="font-size: 24px; font-weight: 600;">Sign up for our newsletter</h1>
+                    <h2 style="font-size: 16px; font-weight: 500;" class="about">THE MORE WE KNOW ABOUT YOU AND YOUR CHOICES, THE BETTER SERVICE WE ASSURE.</h2>
+                </div>
+                <div class="col-md-12">
+                    <img src="../../../assets/icons/e-mail-envelope.svg" width="38px" height="38px" />
+                    <input
+                        class="int"
+                        type="email"
+                        name="newsSubscribe"
+                        id="search"
+                        [(ngModel)]="newsSubscribe.email"
+                        placeholder="Your email address..."
+                        formControlName="email"
+                        required
+                    />
+                    <button
+                        type="submit"
+                        class=" form-control get-in-touch btn btn-light Login"
+                        (click)="submit()"
+                        [disabled]="!DetailsForm.valid"
+                        style="font-size:12px;color:#ffffff"
+                    >
+                        SUBSCRIBE NOW
+                    </button>
+                    <div class="row end">
+                        <div class="col-md-12 justify-content-center">
+                            <span class="error" *ngIf="DetailsForm.get('email').touched && DetailsForm.get('email').hasError('required')">
+                                Enter valid Email
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

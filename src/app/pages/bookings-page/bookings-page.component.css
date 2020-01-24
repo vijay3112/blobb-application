@@ -1,0 +1,286 @@
+.banner-image {
+    background-image: url("../../../assets/img/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+    width: auto;
+    color: white;
+    position: relative;
+    bottom: 16px;
+}
+.banner-text h1 {
+    position: absolute;
+    top: 45%;
+    left: 70px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 640px) {
+    .banner-text h1 {
+        position: absolute;
+        top: 46%;
+        left: 38px;
+        font-weight: bold;
+        font-size: 25px;
+    }
+}
+.checkbox input[type="checkbox"] {
+    visibility: hidden;
+}
+
+.checkbox {
+    /* display: block; */
+    cursor: pointer;
+    font-size: 20px;
+}
+.checkbox span:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    /* top: 0px; */
+    top: 7px;
+    margin: 4px;
+    width: 18px;
+    height: 18px;
+    transition: transform 0.28s ease;
+    border-radius: 3px;
+    border: 2px solid #000000;
+}
+
+.checkbox span:after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 5px;
+    border-bottom: 2px solid #000000;
+    border-left: 2px solid #000000;
+    -webkit-transform: rotate(-45deg) scale(0);
+    -moz-transform: rotate(-45deg) scale(0);
+    -ms-transform: rotate(-45deg) scale(0);
+    transform: rotate(-45deg) scale(0);
+    position: absolute;
+    /* top: 10px; */
+    top: 16px;
+    left: 8px;
+}
+
+.checkbox input[type="checkbox"]:checked ~ span::before {
+    color: #000000;
+}
+
+.checkbox input[type="checkbox"]:checked ~ span::after {
+    -webkit-transform: rotate(-45deg) scale(1);
+    -moz-transform: rotate(-45deg) scale(1);
+    -ms-transform: rotate(-45deg) scale(1);
+    transform: rotate(-45deg) scale(1);
+}
+
+.checkbox span {
+    min-height: 34px;
+    display: block;
+    padding-left: 40px !important;
+    margin-bottom: 0;
+    font-weight: 500;
+    cursor: pointer;
+}
+.checkbox span {
+    position: absolute;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.checkbox input[type="checkbox"]:focus + span::before {
+    outline: 0;
+}
+.checkbox[disabled] {
+    background-color: #ccc;
+}
+.blur {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.active {
+    width: 160px;
+    height: 40px;
+    background-color: #f73f5b !important;
+    color: white !important;
+    border-style: none;
+    border: 1px solid #f73f5b !important;
+    transition: all ease-in-out 300ms;
+}
+.price {
+    color: #f73f5b;
+    font-size: 15px;
+    font-weight: 500;
+}
+.count {
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+    animation: blinking 0.99s infinite;
+    background-color: #f73f5b;
+    padding: 3px;
+    height: 35px;
+}
+.paybtn {
+    margin-bottom: 1rem;
+    width: 160px;
+    height: 40px;
+    background-color: #f73f5b;
+    border-style: none;
+    color: #fff;
+}
+
+@media screen and (max-width: 640px) {
+    .paybtn {
+        margin-bottom: 1rem;
+        width: 100px;
+        height: 40px;
+        background-color: #f73f5b;
+        border-style: none;
+        color: #fff;
+        margin-right: 2px;
+    }
+}
+@keyframes blinking {
+    0% {
+        visibility: hidden;
+    }
+    50% {
+        visibility: hidden;
+    }
+
+    100% {
+        visibility: visible;
+    }
+}
+.total-price {
+    color: #f73f5b;
+    font-size: 17px;
+    font-weight: 400;
+}
+.inActive {
+    width: 160px;
+    height: 40px;
+    background-color: transparent;
+    border-style: none;
+    border: 1px solid black;
+    color: black;
+    transition: all ease-in-out 300ms;
+}
+
+.inActivecard {
+    border-left: 5px solid #ccc;
+    transition: all ease-in-out 300ms;
+    /* box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1); */
+    box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.active-card {
+    border-left: 5px solid #f73f5b !important;
+    /* box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.1); */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    transition: all ease-in-out 300ms;
+}
+.room {
+    font-size: 15px;
+    font-family: inherit;
+    font-weight: 500;
+}
+.price-section {
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+}
+.line {
+    width: 100%;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.08);
+}
+.vertical-line {
+    border: 1px solid #ced4da;
+    height: 150px;
+    width: 1px;
+}
+.flat-title {
+    font-family: sans-serif;
+}
+
+@media screen and (max-width: 640px) {
+    .flat-title {
+        /* font-family: sans-serif; */
+        font-size: 20px;
+    }
+    .checkbox span:before {
+        top: 0px !important;
+    }
+    .checkbox span:after {
+        top: 10px !important;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    h4 {
+        font-size: 19px !important;
+    }
+    .count {
+        font-size: 21px;
+        font-weight: 500;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .vertical-line {
+        border: 1px solid #ced4da;
+        height: 1px;
+        width: 100% !important;
+        margin-left: 18px;
+        margin-bottom: 10px;
+    }
+}
+@media screen and (max-width: 455px) {
+    .price {
+        font-size: 15px;
+    }
+    .total-price {
+        font-size: 16px;
+    }
+    .dates {
+        padding-left: 2px !important;
+    }
+}
+@media screen and (max-width: 376px) {
+    h4 {
+        font-size: 16px !important;
+    }
+    .count {
+        font-size: 16px;
+    }
+}
+
+input[type="checkbox"][disabled] {
+    border-color: #eee;
+    color: #ccc !important;
+    background: linear-gradient(to top, #e6e6e6 0px, #fff 100%) repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+    cursor: not-allowed !important;
+}
+@media screen and (max-width: 330px) {
+    .card1 {
+        margin: 0 35px 15px 10px !important;
+    }
+    .inActivecard {
+        margin-right: 25px !important;
+    }
+    .adjustment {
+        padding-left: 0px;
+    }
+    .banner-text h1 {
+        font-size: 22px;
+    }
+    .inActive {
+        margin-bottom: 15px !important;
+    }
+    .paynow,
+    .now {
+        margin-right: 20px !important;
+    }
+}

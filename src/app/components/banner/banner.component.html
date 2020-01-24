@@ -1,0 +1,249 @@
+<div class="image" id="home">
+    <div class="container-fluid h-100 blur">
+        <div class="row h-100 align-items-center">
+            <div class="col-md-6 col-sm-12 col-12 col-lg-7 landing-desc typewriter">
+                <div class="align-middle" data-aos="zoom-in" data-aos-duration="1500">
+                    <h3 class="text-center" style=" font-weight:700; color:#ffffff">
+                        For Everyone
+                        <span style=" font-weight:700;color: #f73f5b;">
+                            Loves
+                        </span>
+                        a
+                    </h3>
+                    <h3 class="font-weight-bold text-center" style=" font-weight:700;color:#f73f5b">
+                        Home Away
+                        <span class="font-weight-bold text-center" style=" font-weight:700;color:#ffffff">
+                            from Home
+                        </span>
+                    </h3>
+                </div>
+            </div>
+            <div class="col-md-5 col-sm-12 col-12 col-lg-5 stay">
+                <div class="card" style="width: 320px;height: 300px;">
+                    <div class="card-body">
+                        <h6 class="card-title" style="font-weight: bold;letter-spacing: 1.9px;text-align: center">BOOK YOUR STAY AT BLOBB</h6>
+                        <form novalidate autocomplete="off" [formGroup]="UserDetailsForm">
+                            <div class="input-container">
+                                <select
+                                    style="border: 1px solid #27383f !important;font-weight: 600;padding-left: 10px !important"
+                                    class="form-control"
+                                    [(ngModel)]="selectedProperty"
+                                    formControlName="selectedProperty"
+                                    required
+                                >
+                                    <option [value]="selectedProperty" *ngIf="!selectedProperty" hidden>Select a Property </option>
+                                    <ng-container *ngFor="let item of propertyList; let i = index">
+                                        <option [value]="item.val" style="text-transform: uppercase;font-weight:bold;letter-spacing: 0.9px;">
+                                            {{ item.name }}
+                                        </option>
+                                    </ng-container>
+                                </select>
+                                <span
+                                    class="error"
+                                    *ngIf="UserDetailsForm.get('selectedProperty').touched && UserDetailsForm.get('selectedProperty').hasError('required')"
+                                    style="bottom:34px"
+                                >
+                                    Select a location
+                                </span>
+                                <!-- <a data-toggle="modal" data-target="#exampleModalCenter" style="margin: 0 0 0 10px"
+                                    ><img src="../../../assets/icons/external-link-symbol.svg" height="16px" />
+                                </a> -->
+                            </div>
+                            <div class="input-container">
+                                <div class="row" style="height: 95px;">
+                                    <div class="col-md-6 col-sm-6 col-12 chec">
+                                        <label style="margin-top:2px;font-size: 12px; font-weight: 600;">Check-In</label>
+                                        <div class="row">
+                                            <div class="col-md-12 col-sm-12 col-12">
+                                                <input
+                                                    style="border: 1px solid #27383f !important;font-weight: 600;padding-left: 8px;letter-spacing:0.9px;cursor: pointer;"
+                                                    id="cal-img"
+                                                    type="text"
+                                                    [bsConfig]="datePickerConfig"
+                                                    class="form-control"
+                                                    bsDatepicker
+                                                    #dp="bsDatepicker"
+                                                    placement="bottom"
+                                                    autocomplete="off"
+                                                    [(ngModel)]="roomBook.fromDate"
+                                                    name="roomBook_fromDate"
+                                                    placeholder="From Date"
+                                                    readonly
+                                                    [minDate]="minDate"
+                                                    [maxDate]="roomBook.toDate"
+                                                    formControlName="date"
+                                                    required
+                                                />
+                                                <div class="d-flex flex-row-reverse checkin">
+                                                    <i
+                                                        class="far fa-calendar-alt p-2"
+                                                        (click)="dp.toggle()"
+                                                        [attr.aria-expanded]="dp.isOpen"
+                                                        style="position: relative;bottom: 33px;cursor: pointer;"
+                                                    ></i>
+                                                    <!-- <button class="btn btn-success" (click)="dp.toggle()" [attr.aria-expanded]="dp.isOpen">Date Picker</button> -->
+                                                </div>
+                                                <span
+                                                    class="error"
+                                                    *ngIf="UserDetailsForm.get('date').touched && UserDetailsForm.get('date').hasError('required')"
+                                                    style="position:relative;bottom:34px"
+                                                >
+                                                    Date required
+                                                </span>
+                                                <!-- <span class="error" *ngIf="!isValid" style="position:relative;top|
+                                                ':34px">
+                                                    Time required
+                                                </span> -->
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 col-sm-6 col-12">
+                                        <label style="font-size: 12px;font-weight: 600">Check-Out</label>
+                                        <div class="row">
+                                            <div class="col-md-12 col-sm-12 col-12">
+                                                <input
+                                                    style="border: 1px solid #27383f !important;font-weight: 600;padding-left: 8px;letter-spacing:0.9px;cursor: pointer;"
+                                                    id="cal-img"
+                                                    type="text"
+                                                    [bsConfig]="datePickerConfig"
+                                                    class="form-control"
+                                                    #dpy="bsDatepicker"
+                                                    placement="bottom"
+                                                    bsDatepicker
+                                                    autocomplete="off"
+                                                    readonly
+                                                    placeholder="To Date"
+                                                    readOnly
+                                                    name="roomBook_toDate"
+                                                    [(ngModel)]="roomBook.toDate"
+                                                    [minDate]="roomBook.fromDate"
+                                                    formControlName="date1"
+                                                    required
+                                                />
+                                                <div class="d-flex flex-row-reverse icon">
+                                                    <i
+                                                        class="far fa-calendar-alt p-2"
+                                                        (click)="dpy.toggle()"
+                                                        [attr.aria-expanded]="dp.isOpen"
+                                                        style="position: relative;bottom: 33px;cursor: pointer;"
+                                                    ></i>
+                                                </div>
+                                                <!-- <button class="btn btn-success" (click)="dp.toggle()" [attr.aria-expanded]="dp.isOpen">Date Picker</button> -->
+                                                <span
+                                                    class="error"
+                                                    *ngIf="UserDetailsForm.get('date1').touched && UserDetailsForm.get('date1').hasError('required')"
+                                                    style="position:relative;bottom:34px"
+                                                >
+                                                    Date required
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div
+                                    class="editable-dial-example col form-group"
+                                    style="margin-top: -12px;
+                                padding-left: 15px;"
+                                >
+                                    <input
+                                        style="border: 1px solid black;
+                                    padding: 3px 0px 3px 10px;
+                                    border-radius: 4px;
+                                    font-weight: 400;
+                                    font-size: 15px;
+                                    width: 100%;"
+                                        formControlName="time1"
+                                        name="roomBook.fromTime"
+                                        [(ngModel)]="frTime"
+                                        [format]="24"
+                                        placeholder="CheckIn Time"
+                                        autocomplete="off"
+                                        required
+                                        aria-label="Editable dial"
+                                        [ngxTimepicker]="editableDial"
+                                        readonly
+                                    />
+                                    <ngx-material-timepicker-toggle [for]="editableDial">
+                                        <svg
+                                            style="position: absolute;
+                                            bottom: 6px;
+                                        right: 22px;"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 41.301 41.301"
+                                            width="20px"
+                                            height="20px"
+                                            ngxMaterialTimepickerToggleIcon
+                                        >
+                                            <path
+                                                d="M20.642,0c5.698,0,10.857,2.317,14.602,6.047c3.73,3.746,6.047,8.905,6.047,14.603  c0,5.698-2.317,10.857-6.047,14.603c-3.746,3.73-8.904,6.047-14.602,6.047S9.786,38.983,6.056,35.253  C2.31,31.507,0.008,26.349,0.008,20.65c0-5.698,2.301-10.857,6.047-14.603C9.786,2.317,14.944,0,20.642,0L20.642,0z M31.166,19.523  c0.619,0,1.111,0.508,1.111,1.127c0,0.619-0.492,1.127-1.111,1.127H20.674h-0.032c-0.413,0-0.778-0.238-0.968-0.571l-0.016-0.016  l0,0l-0.016-0.032l0,0v-0.016l0,0l-0.016-0.032l0,0l-0.016-0.032l0,0v-0.016l0,0l-0.016-0.032l0,0l-0.016-0.016l0,0v-0.032l0,0  l-0.016-0.032l0,0v-0.016l0,0l-0.016-0.032l0,0v-0.032l0,0v-0.016v-0.016l-0.016-0.016l0,0v-0.032l0,0v-0.032l0,0V20.73l0,0v-0.016  l0,0v-0.032l0,0V20.65l0,0V7.206c0-0.619,0.492-1.111,1.111-1.111c0.619,0,1.127,0.492,1.127,1.111v12.317H31.166z M33.657,7.635  c-3.333-3.333-7.936-5.381-13.015-5.381S10.96,4.301,7.627,7.635C4.31,10.968,2.246,15.571,2.246,20.65  c0,5.079,2.063,9.682,5.381,13.016c3.333,3.333,7.936,5.381,13.015,5.381s9.682-2.048,13.015-5.381  c3.333-3.333,5.397-7.936,5.397-13.016C39.054,15.571,36.991,10.968,33.657,7.635L33.657,7.635z"
+                                            />
+                                        </svg>
+                                    </ngx-material-timepicker-toggle>
+                                    <ngx-material-timepicker #editableDial [defaultTime]="'00:00'" [enableKeyboardInput]="true"></ngx-material-timepicker>
+                                </div>
+                            </div>
+                            <div class="row guest" style="margin-top:12px">
+                                <div class="col-md-6 col-sm-6 col-6 col-lg-6" style="position:relative;bottom: 24px">
+                                    <div class="form-group">
+                                        <label style="font-size: 12px;margin: 10px 0 1px 0;font-weight: 600">Guests</label>
+                                        <div>
+                                            <button class="btn" (click)="callRate('-')" [disabled]="room.persons == 1">
+                                                <i class="fas fa-minus-circle" style="color:#f73f5b;font-size: 1.1em;"></i>
+                                            </button>
+                                            <span style="font-weight: 700; font-size: 16px; padding: 2px;">{{ room.persons }}</span>
+                                            <button class="btn" (click)="callRate('+')" [disabled]="room.persons == 20">
+                                                <i class="fas fa-plus-circle" style="color:#f73f5b;font-size: 1.1em;"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-6 sear">
+                                    <button type="button" class="btn Search" [disabled]="!UserDetailsForm.valid" (click)="search()">
+                                        <img
+                                            src="../../../assets/icons/search.png"
+                                            style="padding:0 0 3px 2px; letter-spacing: 0.5px;font-weight: bold;"
+                                        />SEARCH
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" style="max-width: 270px;height: 300px;">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">Select your Time slot</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-head" style="overflow-y: hidden;padding-left: 10px">
+                <div class="modal-body">
+                    <div class="col">
+                        <div class="row" style="color:#f73f5b;font-weight: 500">
+                            <h5>Check-In Time</h5>
+                            <timepicker
+                                [(ngModel)]="roomBook.fromTime"
+                                [(ngModel)]="mytime"
+                                (ngModelChange)="changed()"
+                                (isValid)="isValid = $event"
+                            ></timepicker>
+
+                            <pre class="alert alert-info">Time is: {{ mytime }}</pre>
+                            <pre *ngIf="!isValid" class="alert alert-danger">Invalid time format</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->

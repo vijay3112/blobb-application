@@ -1,0 +1,93 @@
+<div class="container ">
+    <div class="row flats-heading">
+        <div class="col-md-12 feel" style="padding: 30px">
+            <h1>Feel At Home In</h1>
+            <hr />
+        </div>
+    </div>
+    <!-- <div class="row ml-auto">
+        <h2>Explore In <span style=" color:#f73f5b">Banjara Hills</span></h2>
+    </div> -->
+    <!-- <div class="container-fluid">
+        <div class="row">
+            <div class="bhimg"></div>
+        </div>
+    </div> -->
+    <div class="row flats">
+        <h2 class="col-12">Explore In <span style=" color:#f73f5b">Banjara Hills</span></h2>
+        <!-- <div class="img-bg1"></div> -->
+        <ng-container *ngFor="let item of items">
+            <div class="col-md-6 col-sm-6 col-lg-4 col-xl-4 col-10 ml-auto mr-auto" data-aos="fade-up"
+                data-aos-duration="1000">
+                <div class="box14">
+                    <img [src]="item.img" alt="" />
+                    <div class="box-content ">
+                        <h6 class="title">{{ item.head }}</h6>
+                        <span class="post">{{ item.p }}</span><br />
+                        <span class="post">{{ item.p1 }}</span><br />
+                        <span class="post">{{ item.p2 }}</span><br />
+                    </div>
+                </div>
+                <p>{{ item.name }}</p>
+            </div>
+        </ng-container>
+    </div>
+    <hr class="head" />
+
+    <!-- <div class="row ml-auto">
+        <h2>Explore In <span style=" color:#f73f5b">Jubilee Hills</span></h2>
+    </div> -->
+    <!-- <div class="container-fluid">
+        <div class="row">
+            <div class="jhimg"></div>
+        </div>
+    </div> -->
+    <div class="row flats">
+        <h2 class="col-12">Explore In <span style=" color:#f73f5b">Jubilee Hills</span></h2>
+        <ng-container *ngFor="let item of items1">
+            <div class="col-md-6 col-sm-6 col-lg-4 col-xl-4 col-10 ml-auto mr-auto" data-aos="fade-up"
+                data-aos-duration="1000">
+                <div class="box14">
+                    <img [src]="item.img" alt="" />
+                    <div class="box-content">
+                        <h6 class="title">{{ item.head }}</h6>
+                        <span class="post">{{ item.p }}</span><br />
+                        <span class="post">{{ item.p1 }}</span><br />
+                        <span class="post">{{ item.p2 }}</span><br />
+                    </div>
+                </div>
+                <p>{{ item.name }}</p>
+            </div>
+        </ng-container>
+    </div>
+    <hr class="head" />
+
+    <!-- <div class="row ml-auto">
+        <h2>Explore In <span style=" color:#f73f5b">Gachibowli</span></h2>
+    </div> -->
+    <!-- <div class="container-fluid">
+        <div class="row">
+            <div class="gimg"></div>
+        </div>
+    </div> -->
+    <div class="row flats">
+        <h2 class="col-12">Explore In <span style=" color:#f73f5b">Gachibowli</span></h2>
+
+        <ng-container *ngFor="let item of items2">
+            <div class="col-md-6 col-sm-6 col-lg-4 col-xl-4 col-10 ml-auto mr-auto" data-aos="fade-up"
+                data-aos-duration="1000">
+                <div class="box14">
+                    <img [src]="item.img" alt="" />
+                    <div class="box-content">
+                        <h6 class="title">{{ item.head }}</h6>
+                        <span class="post">{{ item.p }}</span><br />
+                        <span class="post">{{ item.p1 }}</span><br />
+                        <span class="post">{{ item.p2 }}</span><br />
+                    </div>
+                </div>
+                <p>{{ item.name }}</p>
+            </div>
+        </ng-container>
+    </div>
+    <hr class="head" />
+</div>

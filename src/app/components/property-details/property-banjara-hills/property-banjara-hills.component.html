@@ -1,0 +1,165 @@
+<!-- <div class="image">
+    <div class="container-fluid h-100 blur">
+        <div class="row h-100">
+            <div class="col-md-12">
+                <h1>BLOBB BANJARA HILLS</h1>
+            </div>
+        </div>
+    </div>
+</div> -->
+<div class="image">
+    <div class="container-fluid h-100 blur">
+        <h1 style="font-weight: bold; padding-left: 60px;">BLOBB BANJARA HILLS</h1>
+    </div>
+</div>
+<h2
+    style="text-align: center;
+font-size: 32px;
+padding-top: 60px;"
+>
+    Gallery
+</h2>
+<hr class="gall" />
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-xs-12 col-sm-12 gallaxy">
+            <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
+        </div>
+    </div>
+</div>
+<div class="container section-padding dl-special text-center amenity">
+    <h3 style="padding-top:60px;">Amenities</h3>
+    <hr class="amen" />
+    <div class="row iconsalignment">
+        <ng-container *ngFor="let card of icons">
+            <div class="col-md-4 col-sm-6 col-6 col-lg-2">
+                <img src="{{ card.img }}" />
+                <p>{{ card.p }}</p>
+            </div>
+        </ng-container>
+    </div>
+    <div class="row iconsalignment">
+        <ng-container *ngFor="let cards of icons1">
+            <div class="col-md-4 col-sm-6 col-6 col-lg-2">
+                <img src="{{ cards.img }}" />
+                <p>{{ cards.p }}</p>
+            </div>
+        </ng-container>
+    </div>
+    <div class="row justify-content-md-center iconsalignment">
+        <ng-container *ngFor="let cards1 of icons2">
+            <div class="col-12">
+                <img src="{{ cards1.img }}" />
+                <p>{{ cards1.p }}</p>
+            </div>
+        </ng-container>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <h1
+        style="text-align: center;
+    font-size: 32px;
+   "
+    >
+        Contact-Us
+    </h1>
+    <hr class="cont" />
+    <form class="login-form" novalidate autocomplete="off" [formGroup]="UserDetailsForm" ng-show="$select.searchEnabled">
+        <div class="card" style="border-radius:10px;box-shadow:0 0 10px rgba(0,0,0,0.15);margin-bottom:40px;">
+            <div class="row">
+                <div class="col-md-6 col-sm-12 col-12">
+                    <div class="row padding20">
+                        <div class="col-md-12 col-sm-12 col-12">
+                            <div class="form-group">
+                                <label style="font-size: 12px;">Name</label>
+                                <div class="input-group date" id="firstname">
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        name="contact_name"
+                                        [(ngModel)]="contact.name"
+                                        placeholder="Enter name"
+                                        formControlName="name"
+                                        required
+                                    />
+                                </div>
+                                <span class="error" *ngIf="UserDetailsForm.get('name').touched && UserDetailsForm.get('name').hasError('required')">
+                                    Name required
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-12">
+                            <div class="form-group">
+                                <label style="font-size: 12px;">Email address</label>
+                                <div class="input-group date" id="lastname">
+                                    <input
+                                        type="email"
+                                        class="form-control"
+                                        name="contact_email"
+                                        [(ngModel)]="contact.email"
+                                        placeholder="Enter email"
+                                        formControlName="email"
+                                        required
+                                    />
+                                </div>
+                                <span class="error" *ngIf="UserDetailsForm.get('email').touched && UserDetailsForm.get('email').hasError('required')">
+                                    Enter valid Email
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-12">
+                            <div class="form-group">
+                                <label style="font-size: 12px;">Mobile</label>
+                                <div class="input-group date" id="phone">
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        name="contact_mobile"
+                                        [(ngModel)]="contact.mobile"
+                                        formControlName="mobile"
+                                        placeholder="Enter mobile number"
+                                        required
+                                    />
+                                </div>
+                                <span class="error" *ngIf="UserDetailsForm.get('mobile').touched && UserDetailsForm.get('mobile').hasError('required')">
+                                    Invalid Mobile Number
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-12">
+                            <label style="font-size: 12px;">Message</label>
+                            <div class="input-group date" id="message">
+                                <textarea
+                                    class="form-group"
+                                    rows="8"
+                                    cols="150"
+                                    style="border:1px solid silver !important;min-height: 40px;max-height: 190px;border-radius: 4px"
+                                    [(ngModel)]="contact.message"
+                                    name="contact_message"
+                                    formControlName="message"
+                                ></textarea>
+                            </div>
+                        </div>
+
+                        <div class="col-7 " style="margin:auto">
+                            <button type="submit" class="form-control get-in-touch btn" [disabled]="!UserDetailsForm.valid" (click)="save()">
+                                SUBMIT
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-12">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.7533768488047!2d78.43705851538562!3d17.423619288056937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb97cc29be5c95%3A0x2d00f65fa989c986!2sBlobb+(Premium+Serviced+Apartments)%2C+Banjara+Hills!5e0!3m2!1sen!2sin!4v1554446980992!5m2!1sen!2sin"
+                        width="100%"
+                        height="620"
+                        frameborder="0"
+                        style="border:0"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

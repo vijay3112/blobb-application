@@ -1,0 +1,102 @@
+.image {
+    background-image: url("../../../assets/gachibowli/gachibowli44.jpg");
+    background-repeat: no-repeat;
+    position: relative;
+    bottom: 16px;
+    width: 100%;
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+}
+.blur {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+p {
+    font-size: 15px;
+    /* padding-bottom: 8px; */
+    color: #777777;
+    line-height: 23px;
+    word-spacing: 3px;
+    font-weight: 400;
+    text-align: justify;
+}
+
+@media screen and (max-width: 420px) {
+    p {
+        font-size: 12px;
+        /* padding-bottom: 8px; */
+        color: #777777;
+        /* line-height: 25px; */
+        word-spacing: 3px;
+        font-weight: 400;
+        text-align: justify;
+    }
+}
+@media screen and (max-width: 991px) {
+    .blur h1 {
+        padding-top: 70px !important;
+    }
+}
+
+h4 {
+    font-size: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+img {
+    width: 100%;
+    vertical-align: middle;
+}
+h3 {
+    padding-bottom: 15px;
+    padding-top: 10px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.5;
+    padding-top: 30px;
+}
+@media screen and (max-width: 330px) {
+    .w-100 {
+        width: 94% !important;
+        margin-right: 25px !important;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .image {
+        background-repeat: repeat-x;
+        background-position-x: 50%;
+        animation: bg-slide 60s linear infinite;
+        -webkit-animation: bg-slide 60s linear infinite;
+        will-change: background-position-x;
+        animation-fill-mode: both;
+        -webkit-animation-fill-mode: both;
+    }
+    @keyframes bg-slide {
+        0% {
+            background-position-x: 0%;
+        }
+        50% {
+            background-position-x: 100%;
+        }
+        100% {
+            background-position-x: 0%;
+        }
+    }
+
+    @-webkit-keyframes bg-slide {
+        0% {
+            background-position-x: 0%;
+        }
+        50% {
+            background-position-x: 100%;
+        }
+        100% {
+            background-position-x: 0%;
+        }
+    }
+}

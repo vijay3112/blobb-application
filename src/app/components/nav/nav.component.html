@@ -1,0 +1,140 @@
+<nav class="navbar-expand-lg navbar-light">
+    <aside mousewheel (scroll)="onWindowScroll($event)">
+        <head
+            *ngIf="valid1"
+            class="padding-one-lr"
+            [ngClass]="{
+                'show-head': isShowHeadActive,
+                'hide-head': !isShowHeadActive
+            }"
+        >
+            <div class="container-fluid" id="navfluid">
+                <div class="image">
+                    <img
+                        src="../../../assets/img/blobb.svg"
+                        routerLink="/"
+                        alt="Bloob"
+                        data-toggle="collapse"
+                        data-target=".navbar-collapse.show"
+                        [style.color]="!isShowHeadActive ? 'white' : '#000000'"
+                        style="cursor:pointer;"
+                    />
+
+                    <button
+                        class="navbar-toggler collapsed button"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#navigationbar"
+                        aria-controls="navigationbar"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                        [style.color]="!isShowHeadActive ? 'white' : '#000000'"
+                    >
+                        <span class="navbar-toggler-icon" style="outline:none"></span>
+                    </button>
+                    <div class="collapse navbar-collapse pull-right" id="navigationbar">
+                        <ul class="nav navbar-nav ml-auto sidnav">
+                            <li
+                                class="line"
+                                data-toggle="collapse"
+                                data-target=".navbar-collapse.show"
+                                *ngIf="valid"
+                                [ngClass]="{
+                                    'mat-subheading-2': isShowHeadActive
+                                }"
+                                [style.color]="!isShowHeadActive ? 'white' : '#000000'"
+                            >
+                                <a routerLink="/" style=" text-decoration:none"> Home</a>
+                                <div
+                                    class="nav-link"
+                                    style="margin: auto;
+                                width: 45px;"
+                                ></div>
+                            </li>
+                            <li
+                                class="line animated dropdown dropbtn "
+                                data-toggle="collapse"
+                                data-target=".navbar-collapse.show"
+                                *ngIf="valid"
+                                [ngClass]="{
+                                    'mat-subheading-2': isShowHeadActive
+                                }"
+                                [style.color]="!isShowHeadActive ? 'white' : '#000000'"
+                            >
+                                <a routerLink="/about-us" style=" text-decoration:none">About Us <span class="sr-only">Toggle navigation</span></a>
+                                <div
+                                    class="nav-link"
+                                    style="margin: auto;
+                                width: 65px;"
+                                ></div>
+                            </li>
+                            <li
+                                class="line"
+                                data-toggle="collapse"
+                                data-target=".navbar-collapse.show"
+                                *ngIf="valid"
+                                [ngClass]="{
+                                    'mat-subheading-2': isShowHeadActive
+                                }"
+                                [style.color]="!isShowHeadActive ? 'white' : '#000000'"
+                            >
+                                <a routerLink="corporate-booking" style="text-decoration:none">Corporate Booking</a>
+                                <div
+                                    class="nav-link"
+                                    style="margin: auto;
+                                width: 135px;"
+                                ></div>
+                            </li>
+                            <li
+                                class="line"
+                                data-toggle="collapse"
+                                data-target=".navbar-collapse.show"
+                                *ngIf="valid"
+                                [ngClass]="{
+                                    'mat-subheading-2': isShowHeadActive
+                                }"
+                                [style.color]="!isShowHeadActive ? 'white' : '#000000'"
+                            >
+                                <a routerLink="/blog" style=" text-decoration:none"> Blog</a>
+                                <div
+                                    class="nav-link"
+                                    style="margin: auto;
+                                width: 37px;"
+                                ></div>
+                            </li>
+                            <li
+                                class="line"
+                                data-toggle="collapse"
+                                data-target=".navbar-collapse.show"
+                                *ngIf="valid"
+                                [ngClass]="{
+                                    'mat-subheading-2': isShowHeadActive
+                                }"
+                                [style.color]="!isShowHeadActive ? 'white' : '#000000'"
+                            >
+                                <a routerLink="/contact-us" style="text-decoration:none">Contact Us</a>
+                                <div
+                                    class="nav-link"
+                                    style="margin: auto;
+                                width: 78px;"
+                                ></div>
+                            </li>
+
+                            <!-- <button
+                                type="button"
+                                class="btn Login nav-item"
+                                data-toggle="collapse"
+                                data-target=".navbar-collapse.show"
+                                *ngIf="valid"
+                                [style.color]="!isShowHeadActive ? 'white' : '#000000'"
+                                routerLink="/signin"
+                            >
+                                Sign in / Sign up
+                            </button> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </head>
+    </aside>
+</nav>

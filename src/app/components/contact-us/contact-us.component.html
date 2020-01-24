@@ -1,0 +1,347 @@
+<div class="image">
+    <div class="container-fluid h-100 blur">
+        <h1 style=" font-weight:700; color:#ffffff;">Contact-Us</h1>
+    </div>
+</div>
+<div class="row d-flex justify-content-center">
+    <div class="col-md-11 col-sm-9 col-11">
+        <div class="row">
+            <div class="col-md-6  col-sm-12 col-12 ">
+                <div
+                    class="card head5"
+                    style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius: 8px;margin-top: 30px;"
+                >
+                    <img
+                        class="pic"
+                        style="margin-bottom: 20px;padding-top:55px !important;text-align: center"
+                        src="../../../assets/img/about-us-email.svg"
+                        height="514px "
+                    />
+                    <p class="text-center">BE THE FIRST TO KNOW ABOUT</p>
+                    <p class="text-center">EVERYTHING WE DO</p>
+
+                    <form class="login-form" novalidate autocomplete="off" [formGroup]="DetailsForm" ng-show="$select.searchEnabled">
+                        <div class="row justify-content-center">
+                            <div class="col-md-11 col-sm-11 col-11">
+                                <div class="form-group">
+                                    <label style="font-size: 15px;">Email</label>
+                                    <div class="input-group date" id="email">
+                                        <input
+                                            type="email"
+                                            class="form-control"
+                                            name="contactSubscribe_email"
+                                            [(ngModel)]="contactSubscribe.email"
+                                            placeholder="Enter email"
+                                            formControlName="email"
+                                            required
+                                        />
+                                    </div>
+                                    <span class="error" *ngIf="DetailsForm.get('email').touched && DetailsForm.get('email').hasError('required')">
+                                        Enter valid Email
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class=" col-8">
+                                <div class="input-group date">
+                                    <button type="submit" class="form-control get-in-touch btn" [disabled]="!DetailsForm.valid" (click)="submit()">
+                                        SUBSCRIBE
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-6  col-sm-12 col-12">
+                <div
+                    class="card head5"
+                    style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius: 8px;margin-top: 30px;"
+                >
+                    <h1 class="col-12 text-center" style="padding-bottom:20px;">Get In Touch</h1>
+                    <p class="col-12 text-center">CONTACT US AND WE ASSURE YOU THE</p>
+                    <p class="col-12 text-center">BEST OF COMFORT</p>
+                    <div class="form-group">
+                        <form class="login-form" novalidate autocomplete="off" [formGroup]="UserDetailsForm" ng-show="$select.searchEnabled">
+                            <div class="row justify-content-center">
+                                <div class="col-md-11 col-sm-11 col-11">
+                                    <div class="form-group">
+                                        <label style="font-size: 15px;">Name</label>
+                                        <div class="input-group date" id="firstname">
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                name="contact_name"
+                                                [(ngModel)]="contact.name"
+                                                placeholder="Enter name"
+                                                formControlName="name"
+                                                required
+                                            />
+                                        </div>
+                                        <span class="error" *ngIf="UserDetailsForm.get('name').touched && UserDetailsForm.get('name').hasError('required')">
+                                            Name required
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-11 col-sm-11 col-11">
+                                    <div class="form-group">
+                                        <label style="font-size: 15px;">Email address</label>
+                                        <div class="input-group date" id="lastname">
+                                            <input
+                                                type="email"
+                                                class="form-control"
+                                                name="contact_email"
+                                                [(ngModel)]="contact.email"
+                                                placeholder="Enter email"
+                                                formControlName="email"
+                                                required
+                                            />
+                                        </div>
+                                        <span class="error" *ngIf="UserDetailsForm.get('email').touched && UserDetailsForm.get('email').hasError('required')">
+                                            Enter valid Email
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-11 col-sm-11 col-11">
+                                    <div class="form-group">
+                                        <label style="font-size: 15px;">Mobile</label>
+                                        <div class="input-group date" id="phone">
+                                            <input
+                                                type="number"
+                                                class="form-control"
+                                                name="contact_mobile"
+                                                [(ngModel)]="contact.mobile"
+                                                formControlName="mobile"
+                                                placeholder="Enter mobile number"
+                                                required
+                                            />
+                                        </div>
+                                        <span class="error" *ngIf="UserDetailsForm.get('mobile').touched && UserDetailsForm.get('mobile').hasError('required')">
+                                            Invalid Mobile Number
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-11 col-sm-11 col-11">
+                                    <label style="font-size: 15px;">Message</label>
+                                    <div class="input-group date" id="message">
+                                        <textarea
+                                            class="form-group"
+                                            rows="8"
+                                            cols="150"
+                                            style="border:1px solid silver !important;min-height: 40px;max-height: 190px;border-radius: 4px"
+                                            [(ngModel)]="contact.message"
+                                            pattern="*"
+                                            name="contact_message"
+                                            formControlName="message"
+                                            required
+                                        ></textarea>
+                                    </div>
+                                </div>
+                                <div class=" col-8">
+                                    <div class="input-group date" id="submit">
+                                        <button type="submit" class="form-control get-in-touch btn" [disabled]="!UserDetailsForm.valid" (click)="save()">
+                                            SUBMIT
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div style="margin: 1rem" *ngIf="startLoading">
+                        <apex-progress-bar type="loading"></apex-progress-bar>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row d-flex justify-content-center" style="margin-top:20px;">
+    <div class="col-md-11 col-sm-9 col-11">
+        <div class="maps">
+            <div class="row">
+                <div class="col-md-4 col-sm-12 col-12">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.7330922179667!2d78.34508921538558!3d17.424592088056443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb932665798c7d%3A0x6b68dc3b6e6eba9!2sBlobb+(Premium+Serviced+Apartments)%2C+Gachibowli!5e0!3m2!1sen!2sin!4v1554446369556!5m2!1sen!2sin"
+                        width="100%"
+                        height="408px"
+                        frameborder="0"
+                        style="border:0;margin-bottom:20px;margin-top:10px"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+                <div class="col-md-4 col-sm-12 col-12">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.8495137386226!2d78.39962341538565!3d17.41900808805959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb90d2e918598b%3A0x236014068546ad02!2sBlobb+(Premium+Serviced+Apartments)%2C+Jubilee+Hills!5e0!3m2!1sen!2sin!4v1553931781452!5m2!1sen!2sin"
+                        width="100%"
+                        height="408px"
+                        frameborder="0"
+                        style="border:0;margin-bottom:20px;margin-top:10px"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+                <div class="col-md-4 col-sm-12 col-12">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.7533768488047!2d78.43705851538562!3d17.423619288056937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb97cc29be5c95%3A0x2d00f65fa989c986!2sBlobb+(Premium+Serviced+Apartments)%2C+Banjara+Hills!5e0!3m2!1sen!2sin!4v1554446980992!5m2!1sen!2sin"
+                        width="100%"
+                        height="408px"
+                        frameborder="0"
+                        style="border:0;margin-bottom:20px;margin-top:10px;"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ---------------------------------------search for cancelation----------------------------------- -->
+<!-- 
+<div class="container">
+    <div class="logo">
+        <img src="../../../assets/img/blobb.svg" alt="" />
+    </div>
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search For Booking Id" aria-label="" />
+        <div class="input-group-append">
+            <button class="btn btn-danger" type="button">Search</button>
+        </div>
+    </div>
+</div>
+<div class="container  mb-5">
+    <div class="card " style="margin-top: 40px;">
+        <div class="card-body">
+            <div id="row1" class="row review1">
+                <div class="col col-sm-12 offset-md-1 ">
+                    <h5>Review Your Booking:</h5>
+                </div>
+            </div>
+            <hr />
+            <div id="row2">
+                <div class="row review2">
+                    <div class="col offset-md-1">
+                        <h5>1.Review hotel details:</h5>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col  offset-md-1">
+                        <div id="details-card" class="card">
+                            <div class="card-body">
+                                <div class="price-content">
+                                    <div class="row wrap">
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>Booking Type:</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>Online</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>Booking Date:</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>{{ item.bookingDate | date }}</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>Booking Id:</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>{{ item.bookingRef }}</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>Name:</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>{{ item.name }}</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>Email:</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>{{ item.email }}</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>Mobile:</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>{{ item.mobile }}</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>Flat No:</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>{{ item.flatNo }}</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>Room No:</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>{{ item.roomNo }}</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>Location:</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>{{ item.propertyName }}</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>Guests:</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>{{ item.roomPersons }}</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>Payment Mode:</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>{{ item.paymentMode }}</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>Payment Amount:</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>{{ item.paymentAmount | currency }}</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>Check In:</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>12:00 AM {{ item.checkIn | date }}</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>Check Out:</p>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6 col-6">
+                                            <p>11:59 PM {{ item.checkOut | date }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col offset-md-1">
+                        <h5>Cancellation Policy:</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col  offset-md-1">
+                        <div id="can-card" class="card">
+                            <div class="can-period " style="background-color:gray; ">
+                                <p class="float-left " style="margin-top: 6px; margin-left: 3%">Cancellation period</p>
+                                <p class="float-right " style="margin-top: 6px; margin-right: 3%;color: white">Cancellation Fee</p>
+                            </div>
+                            <div class="can-cont card-body">
+                                <p>
+                                    If you cancel within 48 hours before checkin, you will incur 100.0% of your total stay.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
